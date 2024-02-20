@@ -10,15 +10,22 @@
             background-image: url('https://images.hdqwalls.com/download/night-time-minimal-5k-mj-1920x1080.jpg');
             background-size: cover;
             padding: 20px;
+            margin: 0;
         }
         h1 {
             text-align: center;
             color: #fff;
         }
+        .container {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px;
+        }
         .links {
             list-style-type: none;
             padding: 0;
-            margin: 20px 0;
+            margin: 0;
         }
         .links li {
             margin-bottom: 5px;
@@ -36,32 +43,38 @@
             background-color: rgba(255, 255, 255, 0.8); 
         }
         .image-container {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            z-index: -1;
+            text-align: center; /* центрируем изображение */
         }
         img {
-            width: 250px;
-            height: 250px;
+            max-width: 100%;
+            height: auto;
             opacity: 0.8; 
+            border-radius: 5px; /* добавляем закругление углов */
+        }
+
+        /* Медиа-запрос для мобильных устройств */
+        @media only screen and (max-width: 600px) {
+            .container {
+                margin: 10px; /* уменьшаем отступы */
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Links to Repositories/Projects</h1>
-    <ul class="links">
-        <li><a href="https://github.com/MatveyGuralskiy/Flask-FirstSite">🚀Flask-FirstSite</a></li>
-        <li><a href="https://github.com/MatveyGuralskiy/Ansible">🔧Ansible</a></li>
-        <li><a href="https://github.com/MatveyGuralskiy/Leet-Code">⚡Leet-Code Solutions</a></li>
-        <li><a href="https://github.com/MatveyGuralskiy/Bash-scripts">🐧 Bash Scripts</a></li>
-        <li><a href="https://github.com/MatveyGuralskiy/Python-scripts">🐍 Python Scripts</a></li>
-        <li><a href="https://github.com/MatveyGuralskiy/Networking">🌐 Networking Essentials for DevOps Engineers</a></li>
-        <li><a href="https://github.com/MatveyGuralskiy/Jenkins">✏️ Jenkins </a></li>
-    </ul>
+    <div class="container">
+        <h1>Links to Repositories/Projects</h1>
+        <ul class="links">
+            <li><a href="https://github.com/MatveyGuralskiy/Flask-FirstSite">🚀 Flask-FirstSite</a></li>
+            <li><a href="https://github.com/MatveyGuralskiy/Ansible">🔧 Ansible</a></li>
+            <li><a href="https://github.com/MatveyGuralskiy/Leet-Code">⚡ Leet-Code Solutions</a></li>
+            <li><a href="https://github.com/MatveyGuralskiy/Bash-scripts">🐧 Bash Scripts</a></li>
+            <li><a href="https://github.com/MatveyGuralskiy/Python-scripts">🐍 Python Scripts</a></li>
+            <li><a href="https://github.com/MatveyGuralskiy/Networking">🌐 Networking Essentials for DevOps Engineers</a></li>
+            <li><a href="https://github.com/MatveyGuralskiy/Jenkins">✏️ Jenkins </a></li>
+        </ul>
+    </div>
     <div class="image-container">
         <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmk1ZXIwaWlrcnJtcG02Z2oxYXQ3MmdodnU2ZW80aTdkYWJjbWkxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/du3J3cXyzhj75IOgvA/giphy.gif" alt="GitHub Gif">
     </div>
-    
 </body>
 </html>
