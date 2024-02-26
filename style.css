@@ -7,10 +7,12 @@ body {
     margin: 0;
     font-size: 20px;
 }
+
 h1 {
     text-align: center;
     color: #fff;
 }
+
 .container {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 5px;
@@ -47,6 +49,7 @@ h1 {
 .image-container {
     text-align: center; 
 }
+
 img {
     max-width: 100%;
     height: auto;
@@ -86,16 +89,21 @@ button {
 .buttons button {
     margin: 0 10px;
     text-decoration: none;
+    display: inline-block;
 }
 
 .buttons .github a {
     text-decoration: none;
     color: inherit;
+    display: block; 
+    padding: 8px 16px; 
 }
 
 .buttons .contact-me a {
     text-decoration: none;
     color: inherit;
+    display: block; 
+    padding: 8px 16px; 
 }
 
 button.buttons:hover {
@@ -104,6 +112,17 @@ button.buttons:hover {
 }
 
 @media only screen and (max-width: 600px) {
+    .container {
+        margin: 10px auto; 
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .buttons button {
+        display: block;
+        width: 100%;
+        margin: 10px auto;
+    }
     .container {
         margin: 10px auto; 
     }
