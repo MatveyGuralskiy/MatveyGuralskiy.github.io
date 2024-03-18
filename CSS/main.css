@@ -88,7 +88,7 @@ header {
     right: 0px;
     width: 500px;
     height: 100vh;
-    background: rgb(35, 76, 138);
+    background: #1d4e77;
     z-index: 1;
     display: grid;
     place-items: center;
@@ -106,7 +106,7 @@ header {
 }
 
 #navigation ul li a {
-    color: black;
+    color: white;
     text-decoration: none;
     display: inline-block;
     font-size: 2em;
@@ -116,7 +116,7 @@ header {
 }
 
 #navigation ul li:hover {
-    background-color: rgba(255, 255, 255, 0.500);
+    background-color: rgba(255, 255, 255, 0.50);
 }
 
 .content a:hover {
