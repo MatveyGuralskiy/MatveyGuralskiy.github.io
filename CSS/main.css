@@ -234,7 +234,7 @@ header {
 
     .sci {
         position: absolute;
-        bottom: 400px;
+        bottom: 100px;
         right: initial;
         flex-direction: row;
     }
@@ -248,6 +248,6 @@ header {
         position: absolute;
         height: 350px;
         width: 350px;
-        top: 70px;
+        bottom: 110px;
     }
 }
