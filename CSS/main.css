@@ -245,12 +245,12 @@ header {
     }
 
     .my_photo {
-        margin: 0 auto;
-        position: absolute;
+        position: fixed;
         bottom: 0;
-        left: 0;
-        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
         width: 350px;
-        width: auto;
+        height: auto;
+        margin-bottom: 20px;
     }
 }
