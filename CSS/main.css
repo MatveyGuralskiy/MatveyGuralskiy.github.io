@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 300;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+    z-index: 10000;
+    transition: 0.6s;
+}
+
+.logo img {
+    position: relative;
+    height: 80px;
+    transition: 0.6s;
+    position: absolute;
+    bottom: 30px;
+}
+
+#toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#toggle:before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+#toggle:after {
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    background: url(../Background/Background.webp);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.banner.active {
+    transform: translateX(-400px);
+}
+
+.banner.active #toggle:before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.banner.active #toggle:after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+#navigation {
+    position: fixed;
+    top: 0;
+    right: 0px;
+    width: 400px;
+    height: 100vh;
+    background: beige;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+}
+
+#navigation ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#navigation ul li {
+    list-style: none;
+}
+
+#navigation ul li a {
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2em;
+    margin: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+#navigation ul li:hover {
+    background-color: rgb(46, 135, 161);
+}
+
+.content a:hover {
+    background-color: rgba(255, 255, 255, 0.50);
+}
+
+.content {
+    max-width: 600px;
+}
+
+.content h2 {
+    color: white;
+    font-size: 2.5em;
+}
+
+.content h2 span {
+    color: beige;
+    font-size: 1.2em;
+}
+
+.content p {
+    font-size: 1.2em;
+    color: white;
+    font-weight: 300;
+}
+
+.content a {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    background: white;
+    color: black;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.sci {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 100px;
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    border: 1px solid white;
+    margin: 10px 0 0;
+}
+
+.sci li a:hover {
+    background-color: white;
+}
+
+.sci li a img {
+    max-width: 20px;
+    filter: invert(1);
+}
+
+.sci li a img:hover {
+    mix-blend-mode: difference;
+}
+
+.my_photo {
+    height: 500px;
+    width: 500px;
+    object-fit: cover;
+    margin: 40px;
+}
+
+@media (max-width: 767px) {
+    header {
+        padding: 20px 50px;
+    }
+
+    .logo img {
+        bottom: 0px;
+    }
+
+    .banner {
+        padding: 100px 50px 150px;
+    }
+
+    .banner h2 {
+        font-size: 1.8em;
+    }
+
+    .banner .content p,
+    .banner .content a {
+        font-size: 1.2em;
+    }
+
+    .banner.active {
+        transform: translateX(-250px);
+    }
+
+    #navigation {
+        width: 250px;
+    }
+
+    #navigation ul li a {
+        font-size: 1.5em;
+        margin: 5px 50;
+    }
+
+    .sci {
+        position: absolute;
+        bottom: 400px;
+        right: initial;
+        flex-direction: row;
+    }
+
+    .sci li a {
+        margin: initial;
+        margin-right: 10px;
+    }
+
+    .my_photo {
+        position: absolute;
+        height: 350px;
+        width: 350px;
+        top: 70px;
+    }
+}
