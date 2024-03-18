@@ -202,8 +202,8 @@ header {
         padding: 20px 50px;
     }
 
-    .logo img {
-        bottom: 0px;
+    header a img {
+        top: -3px;
     }
 
     .banner {
@@ -241,15 +241,10 @@ header {
 
     .sci li a {
         margin: initial;
-        margin-right: 10px;
+        margin: 5px 10px;
     }
 
     .my_photo {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: block;
-        max-width: 100%;
+        display: none;
     }
 }
