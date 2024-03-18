@@ -245,9 +245,12 @@ header {
     }
 
     .my_photo {
+        margin: 0 auto;
         position: absolute;
-        height: 350px;
+        bottom: 0;
+        left: 0;
+        text-align: center;
         width: 350px;
-        bottom: 110px;
+        width: auto;
     }
 }
