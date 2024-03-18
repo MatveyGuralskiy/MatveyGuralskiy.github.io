@@ -245,12 +245,9 @@ header {
     }
 
     .my_photo {
-        position: fixed;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 350px;
-        height: auto;
-        margin-bottom: 20px;
+        position: relative;
+        margin: 20px auto;
+        display: block;
+        max-width: 100%;
     }
 }
