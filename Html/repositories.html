@@ -10,17 +10,12 @@
 </head>
 
 <body>
-    <div class="container">
+    <section class="banner" id="sec">
         <header>
-            <h1 class="main-title">All Repositories</h1>
-        </header>
-        <section class="banner" id="sec">
-            <div class="buttons">
-                <button class="github"><a href="https://github.com/MatveyGuralskiy">Profile</a></button>
-                <button class="contact-me"><a href="mailto:mathewguralskiy@gmail.com">Contact Me</a></button>
-            </div>
-            <br>
+            <a href="#" class="logo"><img src="../Images/israel.png" alt="israel"></a>
             <ul class="links">
+                <h1>All repositories</h1>
+                <br>
                 <li><a href="https://github.com/MatveyGuralskiy/DevOps-Tools-Website" target="_blank"> 🛠️ DevOps-Tools
                         Website </a></li>
                 <li><a href="https://github.com/MatveyGuralskiy/AWS" target="_blank"> 🌥️ AWS </a></li>
@@ -41,7 +36,21 @@
                 <li><a href="https://github.com/MatveyGuralskiy/Flask-FirstSite" target="_blank">🚀 Flask-FirstSite</a>
                 </li>
             </ul>
-        </section>
+            <div id="toggle" onclick="toggle()"></div>
+        </header>
+    </section>
+    <div id="navigation">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./repositories.html">Projects</a></li>
+            <li><a href="./resume.html">Resume</a></li>
+            <li><a href="./certifications.html">Certifications</a></li>
+            <li><a href="mailto:mathewguralskiy@gmail.com">Contact</a></li>
+        </ul>
+    </div>
+
+    <script src="../JavaScript/main.js"></script>
     </div>
 </body>
 
