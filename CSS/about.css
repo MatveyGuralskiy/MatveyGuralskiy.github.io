@@ -13,7 +13,7 @@
     height: 80px;
     transition: 0.6s;
     position: absolute;
-    bottom: 30px;
+    top: 10px;
 }
 
 #toggle {
@@ -119,6 +119,26 @@ header {
     transition: 0.6s;
 }
 
+header p {
+    position: relative;
+    color: darkslategrey;
+}
+
+.window {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 30px;
+    margin: 30px auto;
+    transition: 0.5s ease-out;
+}
+
+p {
+    font-size: 40px;
+}
+
+.window:hover {
+    background-color: rgba(255, 255, 255, 0.733);
+}
 
 @media (max-width: 767px) {
     header {
@@ -153,5 +173,18 @@ header {
     #navigation ul li a {
         font-size: 1.5em;
         margin: 5px 50;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    p {
+        right: 20px;
+        font-size: 15px;
+    }
+
+    strong {
+        font-size: 25px;
     }
 }

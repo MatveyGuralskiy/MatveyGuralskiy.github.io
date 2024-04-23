@@ -265,7 +265,12 @@ li:hover {
         margin: 10px auto;
     }
 
-    .container {
+    header ul {
         margin: 10px auto;
+        font-size: 15px;
+    }
+
+    .logo img {
+        display: none;
     }
 }
