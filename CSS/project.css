@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 300;
+}
+
+#navigation {
+    position: fixed;
+    top: 0;
+    right: 0px;
+    width: 500px;
+    height: 100vh;
+    background: #1d4e77;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+}
+
+#navigation ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#navigation ul li {
+    list-style: none;
+}
+
+#navigation ul li a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2em;
+    margin: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+#navigation ul li:hover {
+    background-color: rgba(255, 255, 255, 0.50);
+}
+
+#toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#toggle:before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+#toggle:after {
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    background: url(../Background/Background.webp);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.banner.active {
+    transform: translateX(-400px);
+}
+
+.banner.active #toggle:before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.banner.active #toggle:after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.projects-container {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    margin: 10px;
+}
+
+.project:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.project h2 {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+.project p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.4;
+}
+
+.github-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9em;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.github-link:hover {
+    text-decoration: underline;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+    z-index: 10000;
+    transition: 0.6s;
+}
+
+header p {
+    position: relative;
+    color: darkslategrey;
+}
+
+@media (max-width: 600px) {
+    .projects-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .project img {
+        display: none;
+    }
+
+    header {
+        padding: 20px 50px;
+    }
+
+    header a img {
+        top: -3px;
+    }
+
+    .banner {
+        padding: 100px 50px 150px;
+    }
+
+    .banner h2 {
+        font-size: 1.8em;
+    }
+
+    .banner .content p,
+    .banner .content a {
+        font-size: 1.2em;
+    }
+
+    .banner.active {
+        transform: translateX(-250px);
+    }
+
+    #navigation {
+        width: 250px;
+    }
+
+    #navigation ul li a {
+        font-size: 1.5em;
+        margin: 5px 50;
+    }
+}
