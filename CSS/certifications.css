@@ -119,12 +119,9 @@ header {
     transition: 0.6s;
 }
 
-.certifications img:hover {
-    background-color: rgba(240, 255, 255, 0.604);
-}
-
 .certifications {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     transition: 0.6s;
@@ -132,9 +129,13 @@ header {
 }
 
 .certifications img {
-    height: 350px;
+    height: 300px;
     padding: 35px;
     margin: 20px;
+}
+
+.certifications img:hover {
+    background-color: rgba(240, 255, 255, 0.604);
 }
 
 .certifications a {
@@ -146,7 +147,7 @@ header {
     text-align: center;
     cursor: default;
     color: rgb(255, 255, 255);
-    font-size: 25px;
+    font-size: 23px;
 }
 
 @media (max-width: 767px) {
