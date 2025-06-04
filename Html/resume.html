@@ -4,40 +4,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matvey Guralskiy Portfolio</title>
+    <title>Matvey Guralskiy - Resume</title>
+    <link rel="website icon" type="png" href="https://cdn-icons-png.flaticon.com/512/12081/12081089.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://matveyguralskiy.com">
+    <meta property="og:title" content="Matvey Guralskiy - DevOps Engineer">
+    <meta property="og:description"
+        content="A professional portfolio showcasing my certifications, resume, achievements, and personal insights, reflecting my expertise and passion in DevOps and solution architecture.">
+    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/12081/12081089.png">
+
+    <meta property="twitter:url" content="https://matveyguralskiy.com">
+    <meta property="twitter:title" content="Matvey Guralskiy - DevOps Engineer">
+    <meta property="twitter:description"
+        content="A professional portfolio showcasing my certifications, resume, achievements, and personal insights, reflecting my expertise and passion in DevOps and solution architecture.">
+    <meta property="twitter:image" content="https://cdn-icons-png.flaticon.com/512/12081/12081089.png">
+
+    <link rel="stylesheet" href="../CSS/main.css">
     <link rel="stylesheet" href="../CSS/resume.css">
-    <link rel="website icon" type="png" href="../Images/resume.png">
-    <meta name="description" content="My Website with Projects, links to social media and more">
 </head>
 
 <body>
-    <section class="banner" id="sec">
-        <header>
-            <a href="#" class="logo"><img src="../Images/israel.png" alt="israel"></a>
-            <p class="window"><strong>My Resume</strong><br>
-                <a href="https://docs.google.com/document/d/1pTFpNidzMM_mhWlhQ8LqglHSvTdi3q7EeYHbDQf1rNI/edit?usp=sharing"
-                    target="_blank">View
-                    Resume on Google Docs</a>
+    <div class="blur-wrapper"></div>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="../index.html"><img src="../Images/other/israel.png" alt="israel"></a>
+        </div>
+        <div class="mode-toggle">
+            <label class="switch">
+                <input type="checkbox" id="modeSwitch">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div id="toggle" class="menu-button" aria-label="toggle navigation">
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+        </div>
+        <div id="navigation" class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./project.html">Projects</a>
+            <a href="./repositories.html">Repositories</a>
+            <a href="./resume.html">Resume</a>
+            <a href="./certifications.html">Certifications</a>
+            <a href="mailto:mathewguralskiy@gmail.com">Contact</a>
+        </div>
+    </nav>
+
+    <main class="resume-section">
+        <div class="resume-header">
+            <h1 class="resume-title">Resume</h1>
+            <p class="resume-description">
+                As a versatile DevOps Engineer and Cloud Architect, I excel in designing and implementing comprehensive
+                cloud solutions, optimizing infrastructure, and driving digital transformation. My expertise spans
+                across cloud architecture, FinOps, DevOps automation, and infrastructure as code. I specialize in
+                creating scalable, cost-effective solutions that balance performance with operational efficiency. With a
+                strong foundation in both development and operations, I bring a holistic approach to solving complex
+                technical challenges, ensuring robust, secure, and maintainable systems that drive business value.
             </p>
+        </div>
 
-            <div id="toggle" onclick="toggle()"></div>
+        <div class="career-path">
+            <div class="moving-dot"></div>
+            <div class="career-step">
+                <div class="career-step-content">
+                    <div class="career-date">August 2023</div>
+                    <h3 class="career-title">DevOps Journey Begins</h3>
+                    <p class="career-description">Started my journey into the world of DevOps, diving deep into
+                        automation, cloud technologies, and infrastructure as code.</p>
+                </div>
+            </div>
 
-        </header>
-    </section>
-    <div id="navigation">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./project.html">Projects</a></li>
-            <li><a href="./repositories.html">Repositories</a></li>
-            <li><a href="./resume.html">Resume</a></li>
-            <li><a href="./certifications.html">Certifications</a></li>
-            <li><a href="mailto:mathewguralskiy@gmail.com">Contact</a></li>
-        </ul>
-    </div>
+            <div class="career-step">
+                <div class="career-step-content">
+                    <div class="career-date">March 2024</div>
+                    <h3 class="career-title">Kernelios Course</h3>
+                    <p class="career-description">Enrolled in professional DevOps training at Kernelios, enhancing my
+                        skills in cloud architecture, CI/CD, and infrastructure management.</p>
+                </div>
+            </div>
 
+            <div class="career-step">
+                <div class="career-step-content">
+                    <div class="career-date">September 2024 - Present
+                        <span class="current-badge">Current</span>
+                    </div>
+                    <h3 class="career-title">DevOps Engineer at Ness</h3>
+                    <p class="career-description">Started my professional career as a DevOps Engineer at Ness, applying
+                        my knowledge to real-world projects and continuing to grow in the field.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="resume-container">
+            <div class="resume-card">
+                <h3>English Resume</h3>
+                <div class="resume-image-container">
+                    <img src="../Images/resume/resume-eng.png" alt="English Resume Preview" class="resume-image">
+                </div>
+                <a href="../PDF/resume-eng.pdf" download class="cta-button">Download English Resume</a>
+            </div>
+
+            <div class="resume-card">
+                <h3>Hebrew Resume</h3>
+                <div class="resume-image-container">
+                    <img src="../Images/resume/resume-heb.png" alt="Hebrew Resume Preview" class="resume-image">
+                </div>
+                <a href="../PDF/resume-heb.pdf" download class="cta-button">Download Hebrew Resume</a>
+            </div>
+        </div>
+    </main>
     <script src="../JavaScript/main.js"></script>
+    <script src="../JavaScript/resume.js"></script>
 </body>
-
 
 </html>

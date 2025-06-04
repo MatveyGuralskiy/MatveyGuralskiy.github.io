@@ -4,49 +4,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matvey Guralskiy Portfolio</title>
-    <link rel="stylesheet" href="../CSS/resume.css">
-    <link rel="website icon" type="png" href="../Images/resume.png">
-    <meta name="description" content="My Website with Projects, links to social media and more">
+    <title>Matvey Guralskiy - DevOps Engineer</title>
+    <link rel="website icon" type="png" href="https://cdn-icons-png.flaticon.com/512/12081/12081089.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://matveyguralskiy.com">
+    <meta property="og:title" content="Matvey Guralskiy - Portfolio Website">
+    <meta property="og:description"
+        content="A professional portfolio showcasing my certifications, resume, achievements, and personal insights, reflecting my expertise and passion in DevOps and solution architecture.">
+    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/12081/12081089.png">
+
+    <meta property="twitter:url" content="https://matveyguralskiy.com">
+    <meta property="twitter:title" content="Matvey Guralskiy - Portfolio Website">
+    <meta property="twitter:description"
+        content="A professional portfolio showcasing my certifications, resume, achievements, and personal insights, reflecting my expertise and passion in DevOps and solution architecture.">
+    <meta property="twitter:image" content="https://cdn-icons-png.flaticon.com/512/12081/12081089.png">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/about.css">
 </head>
 
 <body>
-    <section class="banner" id="sec">
-        <header>
-            <a href="#" class="logo"><img src="../Images/israel.png" alt="israel"></a>
-            <p class="window"><strong>About me</strong><br>
-                I'm 23 years old, living in Israel,<br>
-                A novice DevOps engineer deeply passionate basketball,<br>
-                reading, movies and about automating software development<br>
-                and delivery processes, dedicated to continuous<br>
-                improvement.<br>
-                I strive to make a meaningful contribution to technology<br>
-                and business processes through my dedication<br>
-                and creativity, learning rigorously each day.<br>
-                Studying to become a DevOps engineer.<br>
-                I like to talk about technology and automation,<br>
-                about the tools used by a devops engineer, etc.<br>
-                Learn something new in the world of IT
-            </p>
+    <div class="blur-wrapper"></div>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="../index.html"><img src="../Images/other/israel.png" alt="israel"></a>
+        </div>
+        <div class="mode-toggle">
+            <label class="switch">
+                <input type="checkbox" id="modeSwitch">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div id="toggle" class="menu-button" aria-label="toggle navigation">
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+        </div>
+        <div class="nav-links" id="navigation">
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="project.html">Projects</a>
+            <a href="repositories.html">Repositories</a>
+            <a href="resume.html">Resume</a>
+            <a href="certifications.html">Certifications</a>
+            <a href="mailto:mathewguralskiy@gmail.com">Contact</a>
+        </div>
+    </nav>
 
-            <div id="toggle" onclick="toggle()"></div>
+    <main class="hero">
+        <div class="hero-content">
+            <h1 class="hero-name">About Me</h1>
+            <p class="hero-title">DevOps Engineer</p>
+            <div class="hero-description">
+                <p>Hey, I'm <strong>Matvey Guralskiy!</strong> I'm a DevOps engineer, and I love bringing order to
+                    complex systems. I
+                    focus on automating infrastructure and optimizing CI/CD workflows to make everything run smoothly
+                    and efficiently. Solving challenging problems and improving processes is what excites me the most.
+                </p>
+                <p>I'm always on the lookout for new knowledge and technologies to keep growing. Right now, I'm diving
+                    deep into cloud technologies to expand my expertise even further.</p>
+                <p>When I'm not working, you'll probably find me playing basketball — it helps me stay in shape and
+                    sharpens my teamwork and strategic thinking. I also love getting involved in different projects to
+                    keep pushing myself and constantly improving.</p>
+            </div>
+        </div>
+        <div class="profile-devops">
+            <img src="../Images/other/DevOps.png" alt="DevOps Picture" class="profile-devops">
+        </div>
 
-        </header>
-    </section>
-    <div id="navigation">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./project.html">Projects</a></li>
-            <li><a href="./repositories.html">Repositories</a></li>
-            <li><a href="./resume.html">Resume</a></li>
-            <li><a href="./certifications.html">Certifications</a></li>
-            <li><a href="mailto:mathewguralskiy@gmail.com">Contact</a></li>
-        </ul>
-    </div>
+        <section class="technologies">
+            <div class="container" id="logos">
+                <h2 class="section-title">Technical Stack</h2>
+                <div class="technologies-list">
+                    <div class="tech-item">
+                        <img src="../Images/logos/aws.png" alt="AWS Logo" class="tech-logo">
+                        <span class="tech-name">AWS</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="../Images/logos/gcp.png" alt="GCP Logo" class="tech-logo">
+                        <span class="tech-name">GCP</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="../Images/logos/kubernetes.png" alt="Kubernetes Logo" class="tech-logo">
+                        <span class="tech-name">Kubernetes</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="../Images/logos/ansible.png" alt="Ansible Logo" class="tech-logo">
+                        <span class="tech-name">Ansible</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="../Images/logos/jenkins.png" alt="Jenkins Logo" class="tech-logo">
+                        <span class="tech-name">Jenkins</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="../Images/logos/git.png" alt="Git Logo" class="tech-logo">
+                        <span class="tech-name">Git</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="../Images/logos/argocd.png" alt="ArgoCD Logo" class="tech-logo">
+                        <span class="tech-name">ArgoCD</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="../Images/logos/github-actions.png" alt="GitHub Actions Logo" class="tech-logo">
+                        <span class="tech-name">GitHub Actions</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="../Images/logos/grafana.png" alt="Grafana Logo" class="tech-logo">
+                        <span class="tech-name">Grafana</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="../Images/logos/prometheus.png" alt="Prometheus Logo" class="tech-logo">
+                        <span class="tech-name">Prometheus</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="../Images/logos/sql.png" alt="SQL Logo" class="tech-logo">
+                        <span class="tech-name">SQL</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="../Images/logos/docker.png" alt="Docker Logo" class="tech-logo">
+                        <span class="tech-name">Docker</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="../Images/logos/terraform.png" alt="Terraform Logo" class="tech-logo">
+                        <span class="tech-name">Terraform</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="../Images/logos/linux.png" alt="Linux Logo" class="tech-logo">
+                        <span class="tech-name">Linux</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="../Images/logos/js.png" alt="JavaScript Logo" class="tech-logo">
+                        <span class="tech-name">JavaScript</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="../Images/logos/python.png" alt="Python Logo" class="tech-logo">
+                        <span class="tech-name">Python</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="../Images/logos/flask.png" alt="Flask Logo" class="tech-logo">
+                        <span class="tech-name">Flask</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="../Images/logos/terragrunt.png" alt="Terragrunt Logo" class="tech-logo">
+                        <span class="tech-name">Terragrunt</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="../Images/logos/django.png" alt="Django Logo" class="tech-logo">
+                        <span class="tech-name">Django</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="../Images/logos/bash.png" alt="Bash Logo" class="tech-logo">
+                        <span class="tech-name">Bash</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="../Images/logos/css.png" alt="CSS Logo" class="tech-logo">
+                        <span class="tech-name">CSS</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="../Images/logos/html.png" alt="HTML Logo" class="tech-logo">
+                        <span class="tech-name">HTML</span>
+                    </div>
+                </div>
+                <div class="cta-container">
+                    <a href="resume.html" class="cta-button">Resume</a>
+                    <a href="certifications.html" class="cta-button">Certifications</a>
+                </div>
+            </div>
+        </section>
 
-    <script src="../JavaScript/main.js"></script>
+        <section class="goals">
+            <div class="container" id="goals">
+                <h2 class="section-title">My Goals</h2>
+                <p>In 2025, my primary goals include:</p>
+                <ul>
+                    <li>Leading a cross-functional DevOps project</li>
+                    <li>Contributing to an open-source DevOps tool</li>
+                    <li>Exploring new cloud technologies and certifications</li>
+                    <li>Deepening my knowledge of Kubernetes and its ecosystem</li>
+                    <li>Developing innovative tools for automating DevOps processes</li>
+                    <li>Obtaining the AWS Solution Architect Pro certification</li>
+                    <li>Creating educational content for beginners in DevOps</li>
+                </ul>
+            </div>
+        </section>
+
+        <script src="../JavaScript/main.js"></script>
+        <script src="../JavaScript/about.js"></script>
+    </main>
 </body>
-
 
 </html>
