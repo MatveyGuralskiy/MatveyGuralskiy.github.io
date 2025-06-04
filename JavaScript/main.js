@@ -56,8 +56,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (savedMode === 'night') {
         body.classList.add('night-mode');
         modeSwitch.checked = true;
-    } else if (savedMode === 'day') {
+    } else {
+        // Always default to day mode
         body.classList.add('day-mode');
+        modeSwitch.checked = false;
+        localStorage.setItem('mode', 'day'); // Set default in localStorage
     }
 
     modeSwitch.addEventListener('change', () => {
