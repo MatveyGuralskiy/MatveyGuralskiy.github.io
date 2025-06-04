@@ -4,70 +4,302 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matvey Guralskiy Portfolio</title>
+    <title>Matvey Guralskiy - Projects</title>
+    <link rel="website icon" type="png" href="https://cdn-icons-png.flaticon.com/512/12081/12081089.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://matveyguralskiy.com">
+    <meta property="og:title" content="Matvey Guralskiy - DevOps Engineer">
+    <meta property="og:description"
+        content="A professional portfolio showcasing my certifications, resume, achievements, and personal insights, reflecting my expertise and passion in DevOps and solution architecture.">
+    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/12081/12081089.png">
+
+    <meta property="twitter:url" content="https://matveyguralskiy.com">
+    <meta property="twitter:title" content="Matvey Guralskiy - DevOps Engineer">
+    <meta property="twitter:description"
+        content="A professional portfolio showcasing my certifications, resume, achievements, and personal insights, reflecting my expertise and passion in DevOps and solution architecture.">
+    <meta property="twitter:image" content="https://cdn-icons-png.flaticon.com/512/12081/12081089.png">
+
+    <link rel="stylesheet" href="../CSS/main.css">
     <link rel="stylesheet" href="../CSS/project.css">
-    <link rel="website icon" type="png" href="../Images/resume.png">
-    <meta name="description" content="My Website with Projects, links to social media and more">
 </head>
 
 <body>
-    <section class="banner" id="sec">
-        <header>
-            <div class="projects-container">
-                <div class="project">
-                    <img src="../Images/Auto-Deploy.png" alt="Auto-Deploy">
-                    <h2>Auto-Deploy Project</h2>
-                    <p>This project simplifies the process of deploying applications through automation. It uses
-                        continuous integration and continuous deployment (CI/CD) practices to ensure smooth and
-                        efficient updates. The screenshot likely illustrates the steps involved in the deployment
-                        pipeline</p>
-                    <a class="github-link" href="https://github.com/MatveyGuralskiy/Auto-Deploy" target="_blank">GitHub
-                        Repository</a>
-                </div>
+    <div class="blur-wrapper"></div>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="../index.html"><img src="../Images/other/israel.png" alt="israel"></a>
+        </div>
+        <div class="mode-toggle">
+            <label class="switch">
+                <input type="checkbox" id="modeSwitch">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div id="toggle" class="menu-button" aria-label="toggle navigation">
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+        </div>
+        <div class="nav-links" id="navigation">
+            <a href="../index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./project.html">Projects</a>
+            <a href="./repositories.html">Repositories</a>
+            <a href="./resume.html">Resume</a>
+            <a href="./certifications.html">Certifications</a>
+            <a href="mailto:mathewguralskiy@gmail.com">Contact</a>
+        </div>
+    </nav>
 
-                <div class="project">
-                    <img src="../Images/FlaskPipeline.jpeg" alt="FlaskPipeline">
-                    <h2>FlaskPipeline Project</h2>
-                    <p>This project automates the deployment of Flask applications to improve efficiency using CI/CD
-                        practices. It integrates tools for continuous integration and continuous deployment to ensure
-                        smooth and consistent updates. The screenshot likely shows the workflow and important parts of
-                        the deployment pipeline</p>
-                    <a class="github-link" href="https://github.com/MatveyGuralskiy/FlaskPipeline"
-                        target="_blank">GitHub
-                        Repository</a>
-                </div>
+    <main class="projects-section">
+        <div class="projects-header">
+            <h1 class="projects-title">My Projects</h1>
+            <p class="projects-description">Explore a curated collection of projects that highlight my practical
+                expertise in applying DevOps principles, designing and deploying resilient cloud architectures, and
+                developing efficient software solutions through automation and continuous integration/delivery</p>
+        </div>
 
-                <div class="project">
-                    <img src="../Images/DribbleData.jpeg" alt="FlaskPipeline">
-                    <h2>DribbleData Project</h2>
-                    <p>DribbleData project is a microservices architecture where Flask services integrate with AWS for a
-                        scalable, secure, and flexible system. With Kubernetes containerization and CI/CD automation
-                        GitHub Actions, it
-                        ensures efficient development and reliable deployment</p>
-                    <a class="github-link" href="https://github.com/MatveyGuralskiy/DribbleData" target="_blank">GitHub
-                        Repository</a>
+        <div class="projects-grid">
+            <div class="project-card" data-project="dribble-data">
+                <img src="../Images/projects/DribbleData-1.jpeg" alt="DribbleData"
+                    style="width: 100%; border-radius: 10px; margin-bottom: 1.5rem;">
+                <h2 class="project-title">DribbleData Project</h2>
+                <p class="project-description">DribbleData project is a microservices architecture where Flask services
+                    integrate with AWS for a
+                    scalable, secure, and flexible system. With Kubernetes containerization and CI/CD automation
+                    GitHub Actions.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Microservices</span>
+                    <span class="tech-tag">FluentBit</span>
+                    <span class="tech-tag">Terraform</span>
+                    <span class="tech-tag">Grafana</span>
+                    <span class="tech-tag">Helm</span>
+                    <span class="tech-tag">CDN</span>
+                    <span class="tech-tag">Kubernetes</span>
                 </div>
-
             </div>
-            <div id="toggle" onclick="toggle()"></div>
-        </header>
 
+            <div class="project-card" data-project="flask-pipeline">
+                <br>
+                <img src="../Images/projects/FlaskPipeline-1.jpeg" alt="FlaskPipeline"
+                    style="width: 100%; border-radius: 10px; margin-bottom: 1.5rem;">
+                <h2 class="project-title">FlaskPipeline Project</h2>
+                <p class="project-description">This project automates the deployment of Flask applications to improve
+                    efficiency using CI/CD
+                    practices. It integrates tools for continuous integration and continuous deployment to ensure
+                    smooth and consistent updates.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Flask</span>
+                    <span class="tech-tag">Kubernetes</span>
+                    <span class="tech-tag">Ansible</span>
+                    <span class="tech-tag">ArgoCD</span>
+                    <span class="tech-tag">GitOps</span>
+                    <span class="tech-tag">CI/CD</span>
+                </div>
+            </div>
 
-    </section>
-    <div id="navigation">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./project.html">Projects</a></li>
-            <li><a href="./repositories.html">Repositories</a></li>
-            <li><a href="./resume.html">Resume</a></li>
-            <li><a href="./certifications.html">Certifications</a></li>
-            <li><a href="mailto:mathewguralskiy@gmail.com">Contact</a></li>
-        </ul>
+            <div class="project-card" data-project="auto-deploy">
+                <br>
+                <br>
+                <img src="../Images/projects/Auto-Deploy-1.png" alt="Auto-Deploy"
+                    style="width: 100%; border-radius: 10px; margin-bottom: 1.5rem;">
+                <h2 class="project-title">Auto-Deploy Project</h2>
+                <p class="project-description">This project simplifies the process of deploying applications through
+                    automation. It uses
+                    continuous integration and continuous deployment (CI/CD) practices to ensure smooth and
+                    efficient updates.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">CI/CD</span>
+                    <span class="tech-tag">Terraform</span>
+                    <span class="tech-tag">Jenkins</span>
+                    <span class="tech-tag">DockerHub</span>
+                    <span class="tech-tag">Git</span>
+                    <span class="tech-tag">DevOps</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Project Modals -->
+    <div class="modal" id="auto-deploy-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Auto-Deploy Project</h2>
+            <div class="modal-gallery">
+                <div class="gallery-container">
+                    <div class="gallery-slide">
+                        <img src="../Images/projects/Auto-Deploy-1.png" alt="Auto-Deploy Main">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="../Images/projects/AutoDeploy-2.png" alt="Auto-Deploy Secondary">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="../Images/projects/AutoDeploy-3.png" alt="Auto-Deploy Third">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="../Images/projects/AutoDeploy-4.png" alt="Auto-Deploy Fouth">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="../Images/projects/AutoDeploy-5.png" alt="Auto-Deploy Additional">
+                    </div>
+                </div>
+                <div class="gallery-nav">
+                    <button class="gallery-prev">‹</button>
+                    <button class="gallery-next">›</button>
+                </div>
+                <div class="gallery-dots"></div>
+            </div>
+            <div class="modal-details">
+                <h3>🔍 About the Project</h3>
+                <p>
+                    My project is all about making things easier for developers. Whenever there's a new update on
+                    GitHub, a program called Jenkins gets to work. It runs tests to make sure everything's still working
+                    smoothly. Then, it takes those files and turns them into special packages called Docker images.
+                    These images are stored online on something called Docker Hub.
+                    After that, we check to make sure everything still works with those Docker images. Next up, we use a
+                    tool called Terraform to set up all the necessary computer stuff on Amazon Web Services (AWS).
+                    Finally, we end up with a fully functional website that you can access using a simple web address.
+                    It's all secure, too, with encryption and all that, and it's spread across four servers, each
+                    running those Docker packages we made earlier.</p>
+
+                <h3>Technology Stack</h3>
+                <div class="modal-tech-stack">
+                    <span class="modal-tech-tag">Terraform</span>
+                    <span class="modal-tech-tag">AWS</span>
+                    <span class="modal-tech-tag">GitHub</span>
+                    <span class="modal-tech-tag">Jenkins</span>
+                    <span class="modal-tech-tag">Docker</span>
+                    <span class="modal-tech-tag">DockerHub</span>
+                    <span class="modal-tech-tag">Git</span>
+                </div>
+
+                <div class="modal-links">
+                    <a href="https://github.com/MatveyGuralskiy/Auto-Deploy" target="_blank" class="modal-link">View on
+                        GitHub</a>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <script src="../JavaScript/project.js"></script>
+    <div class="modal" id="flask-pipeline-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>FlaskPipeline Project</h2>
+            <div class="modal-gallery">
+                <div class="gallery-container">
+                    <div class="gallery-slide">
+                        <img src="../Images/projects/FlaskPipeline-1.jpeg" alt="FlaskPipeline Main">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="../Images/projects/FlaskPipeline-2.jpeg" alt="FlaskPipeline Secondary">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="../Images/projects/FlaskPipeline-3.jpeg" alt="FlaskPipeline Third">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="../Images/projects/FlaskPipeline-4.jpeg" alt="FlaskPipeline Additional">
+                    </div>
+                </div>
+                <div class="gallery-nav">
+                    <button class="gallery-prev">‹</button>
+                    <button class="gallery-next">›</button>
+                </div>
+                <div class="gallery-dots"></div>
+            </div>
+            <div class="modal-details">
+                <h3>🔍 About the Project</h3>
+                <p>
+                    This project establishes a complete CI/CD pipeline for a Flask application using PostgreSQL as the
+                    database. It is designed to ensure high-quality code, secure deployments, and efficient monitoring.
+                    The pipeline incorporates secure password management using hashing and salting. The application code
+                    is hosted on GitHub, with Jenkins orchestrating the CI/CD process</p>
 
+                <h3>Technology Stack</h3>
+                <div class="modal-tech-stack">
+                    <span class="modal-tech-tag">Flask</span>
+                    <span class="modal-tech-tag">AWS</span>
+                    <span class="modal-tech-tag">Jenkins</span>
+                    <span class="modal-tech-tag">Terraform</span>
+                    <span class="modal-tech-tag">Kubernetes</span>
+                    <span class="modal-tech-tag">ArgoCD</span>
+                    <span class="modal-tech-tag">Helm</span>
+                    <span class="modal-tech-tag">Grafana</span>
+                    <span class="modal-tech-tag">Prometheus</span>
+                    <span class="modal-tech-tag">Ansible</span>
+                    <span class="modal-tech-tag">GitHub Actions</span>
+                    <span class="modal-tech-tag">Docker</span>
+                    <span class="modal-tech-tag">Bandit</span>
+                    <span class="modal-tech-tag">Trivy</span>
+                    <span class="modal-tech-tag">SonarQube</span>
+                    <span class="modal-tech-tag">PostreSQL</span>
+                </div>
+
+                <div class="modal-links">
+                    <a href="https://github.com/MatveyGuralskiy/FlaskPipeline" target="_blank" class="modal-link">View
+                        on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="dribble-data-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>DribbleData Project</h2>
+            <div class="modal-gallery">
+                <div class="gallery-container">
+                    <div class="gallery-slide">
+                        <img src="../Images/projects/DribbleData-1.jpeg" alt="DribbleData Main">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="../Images/projects/DribbleData-2.jpeg" alt="DribbleData Secondary">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="../Images/projects/DribbleData-3.jpeg" alt="DribbleData Third">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="../Images/projects/DribbleData-4.jpeg" alt="DribbleData Additional">
+                    </div>
+                </div>
+                <div class="gallery-nav">
+                    <button class="gallery-prev">‹</button>
+                    <button class="gallery-next">›</button>
+                </div>
+                <div class="gallery-dots"></div>
+            </div>
+            <div class="modal-details">
+                <h3>🔍 About the Project</h3>
+                <p>A sophisticated microservices architecture that combines Flask services with AWS infrastructure. The
+                    system leverages Kubernetes for container orchestration and implements automated CI/CD pipelines
+                    through GitHub Actions, ensuring scalable and reliable deployment processes.</p>
+
+                <h3>Technology Stack</h3>
+                <div class="modal-tech-stack">
+                    <span class="modal-tech-tag">AWS</span>
+                    <span class="modal-tech-tag">Terraform</span>
+                    <span class="modal-tech-tag">Kubernetes</span>
+                    <span class="modal-tech-tag">Helm</span>
+                    <span class="modal-tech-tag">Docker</span>
+                    <span class="modal-tech-tag">GitHub Actions</span>
+                    <span class="modal-tech-tag">Git</span>
+                    <span class="modal-tech-tag">Prometheus</span>
+                    <span class="modal-tech-tag">EKS</span>
+                    <span class="modal-tech-tag">Trivy</span>
+                    <span class="modal-tech-tag">Docker Compose</span>
+                    <span class="modal-tech-tag">FluentBit</span>
+                </div>
+
+                <div class="modal-links">
+                    <a href="https://github.com/MatveyGuralskiy/DribbleData" target="_blank" class="modal-link">View on
+                        GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../JavaScript/main.js"></script>
+    <script src="../JavaScript/project.js"></script>
 </body>
 
 </html>

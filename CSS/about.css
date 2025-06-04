@@ -1,190 +1,346 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+:root {
+    --clr-primary: #4a90e2;
+    --clr-dark: #1a1a1a;
+    --clr-light: #ffffff;
+    --clr-gray: #2a2a2a;
 
-* {
+    --clr-day-bg: #f5f5f5;
+    --clr-day-text: #333333;
+    --clr-day-gray: #d9d9d9;
+    --transition: all 0.3s ease;
+}
+
+body {
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    transition: var(--transition);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Night Mode Styles */
+body.night-mode {
+    --clr-primary: #f39c12;
+    --clr-dark: #1a1a1a;
+    --clr-light: #f5f5f5;
+    --clr-gray: #2a2a2a;
+}
+
+/* Day Mode Styles */
+body.day-mode {
+    --clr-primary: #007aff;
+    --clr-dark: var(--clr-day-bg);
+    --clr-light: var(--clr-day-text);
+    --clr-gray: var(--clr-day-gray);
+    background: var(--clr-day-bg);
+}
+
+body.night-mode .technologies .section-title,
+body.night-mode .technologies .tech-name,
+body.night-mode .goals .section-title,
+body.night-mode .goals p,
+body.night-mode .goals ul li {
+    color: var(--clr-light);
+}
+
+body.night-mode .tech-item img[alt="Ansible Logo"] {
+    filter: brightness(0) invert(1);
+}
+
+body.day-mode .tech-item img[alt="Ansible Logo"] {
+    filter: none;
+}
+
+body.night-mode .tech-item img[alt="Flask Logo"] {
+    filter: brightness(0) invert(1);
+}
+
+body.day-mode .tech-item img[alt="Flask Logo"] {
+    filter: none;
+}
+
+.technologies {
+    padding: 20px 5%;
+    text-align: center;
+    max-width: 100%;
+    margin-top: 0;
+}
+
+.technologies .container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.technologies .section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.technologies-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Comfortaa', sans-serif;
-    font-weight: 300;
-}
-
-.logo img {
-    position: relative;
-    height: 80px;
-    transition: 0.6s;
-    position: absolute;
-    top: 10px;
-}
-
-#toggle {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
-
-#toggle:before {
-    content: '';
-    position: absolute;
-    top: 7px;
     width: 100%;
-    height: 2px;
-    background-color: white;
 }
 
-#toggle:after {
-    content: '';
-    position: absolute;
-    bottom: 7px;
-    width: 100%;
-    height: 2px;
-    background-color: white;
-}
-
-#navigation {
-    position: fixed;
-    top: 0;
-    right: 0px;
-    width: 500px;
-    height: 100vh;
-    background: #1d4e77;
-    z-index: 1;
-    display: grid;
-    place-items: center;
-    transition: 0.5s;
-}
-
-#navigation ul {
-    position: relative;
+.tech-item {
     display: flex;
     flex-direction: column;
-}
-
-#navigation ul li {
-    list-style: none;
-}
-
-#navigation ul li a {
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 2em;
-    margin: 10px;
-    font-weight: 500;
-    text-transform: uppercase;
-}
-
-#navigation ul li:hover {
-    background-color: rgba(255, 255, 255, 0.50);
-}
-
-.banner {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 100px;
-    background: url(../Background/Background.webp);
-    background-size: cover;
-    display: flex;
     align-items: center;
-    transition: 0.5s;
-    z-index: 2;
+    text-align: center;
+    max-width: 100px;
 }
 
-.banner.active {
-    transform: translateX(-400px);
+.tech-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(7px 7px 7px rgba(0, 0, 0, 0.2));
 }
 
-.banner.active #toggle:before {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
+.tech-logo:hover {
+    transform: scale(1.1);
 }
 
-.banner.active #toggle:after {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
+.tech-name {
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
 }
 
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+.cta-container {
     display: flex;
-    justify-content: space-between;
-    padding: 40px 100px;
-    z-index: 10000;
-    transition: 0.6s;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    column-gap: 1.2rem;
+    padding-bottom: 10px;
+    width: 100%;
+    margin-top: 30px;
 }
 
-header p {
-    position: relative;
-    color: darkslategrey;
+.cta-button {
+    min-width: 150px;
+    text-align: center;
 }
 
-.window {
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 5px;
-    padding: 30px;
-    margin: 30px auto;
-    transition: 0.5s ease-out;
+.profile-devops {
+    max-width: 1000px;
+    filter: drop-shadow(7px 7px 7px rgba(0, 0, 0, 0.2));
+    margin-top: -50px;
+    margin-bottom: 0;
 }
 
-p {
-    font-size: 40px;
+.goals {
+    padding: 20px 10%;
+    text-align: center;
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 30px;
 }
 
-.window:hover {
-    background-color: rgba(255, 255, 255, 0.733);
+.goals .section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.goals p {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 20px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+.goals ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.goals ul li {
+    font-size: 1.2rem;
+    color: #000000;
+    font-weight: 500;
+    margin: 10px 0;
+    letter-spacing: 1px;
+    width: calc(50% - 20px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+}
+
+.goals ul li:hover,
+.goals ul li.hover-animation {
+    transform: rotate(-2deg);
+    opacity: 0.8;
+}
+
+#logos {
+    margin-top: -90px;
+}
+
+#goals {
+    margin-top: -60px;
+}
+
+@media (max-width: 930px) {
+    .hero {
+        margin-top: 0;
+    }
+
+    .profile-devops {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -80px;
+    }
+
+    .profile-devops img {
+        max-width: 250px;
+        margin: 0;
+    }
+
+    .technologies {
+        margin-top: 30px;
+    }
 }
 
 @media (max-width: 767px) {
-    header {
-        padding: 20px 50px;
+
+    .technologies .section-title,
+    .goals .section-title {
+        font-size: 1.8rem;
     }
 
-    header a img {
-        top: -3px;
+    .goals ul li {
+        width: 100%;
+        font-size: 1.1rem;
     }
 
-    .banner {
-        padding: 100px 50px 150px;
+    .technologies,
+    .goals {
+        padding: 20px 3%;
     }
 
-    .banner h2 {
-        font-size: 1.8em;
+    .cta-container {
+        margin-top: 40px;
+        padding-bottom: 20px;
+        flex-direction: column;
+        gap: 10px;
     }
 
-    .banner .content p,
-    .banner .content a {
-        font-size: 1.2em;
+    .cta-button {
+        margin-top: 5px;
+        width: 100%;
+        max-width: 200px;
     }
 
-    .banner.active {
-        transform: translateX(-250px);
+    .goals {
+        padding-bottom: 20px;
     }
 
-    #navigation {
-        width: 250px;
+    .tech-item {
+        max-width: 80px;
+        margin: 5px;
     }
 
-    #navigation ul li a {
-        font-size: 1.5em;
-        margin: 5px 50;
+    .tech-logo {
+        width: 34.5px;
+        height: 34.5px;
     }
 
-    .logo {
-        display: none;
+    .tech-name {
+        font-size: 12px;
     }
 
-    p {
-        right: 20px;
-        font-size: 15px;
+    .goals ul {
+        gap: 10px;
     }
 
-    strong {
-        font-size: 25px;
+    .goals ul li {
+        padding: 8px;
+        margin: 5px 0;
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    #logos {
+        margin-top: -40px;
+    }
+
+    #goals {
+        margin-top: -30px;
+    }
+
+    .profile-devops img {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 360px) {
+    .tech-item {
+        max-width: 70px;
+    }
+
+    .tech-logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .tech-name {
+        font-size: 11px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+.profile-devops,
+.technologies,
+.goals {
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.99);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (min-width:1150px) and (max-width:1435px) {
+    .profile-devops {
+        width: 700px;
+    }
+}
+
+@media (min-width:931px) and (max-width:1150px) {
+    .profile-devops {
+        width: 500px;
     }
 }

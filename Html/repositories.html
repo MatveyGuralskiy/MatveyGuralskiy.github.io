@@ -4,56 +4,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="List of all my repositories and projects in GitHub profile. Hope you'll like it">
-    <title>Matvey Guralskiy Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="../CSS/repositories.css">
-    <link rel="website icon" type="png" href="../Images/resume.png">
+    <title>Matvey Guralskiy - DevOps Engineer</title>
+    <link rel="website icon" type="png" href="https://cdn-icons-png.flaticon.com/512/12081/12081089.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://matveyguralskiy.com">
+    <meta property="og:title" content="Matvey Guralskiy - Portfolio Website">
+    <meta property="og:description"
+        content="A professional portfolio showcasing my certifications, resume, achievements, and personal insights, reflecting my expertise and passion in DevOps and solution architecture.">
+    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/12081/12081089.png">
+
+    <meta property="twitter:url" content="https://matveyguralskiy.com">
+    <meta property="twitter:title" content="Matvey Guralskiy - Portfolio Website">
+    <meta property="twitter:description"
+        content="A professional portfolio showcasing my certifications, resume, achievements, and personal insights, reflecting my expertise and passion in DevOps and solution architecture.">
+    <meta property="twitter:image" content="https://cdn-icons-png.flaticon.com/512/12081/12081089.png">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/repositories.css">
 </head>
 
 <body>
-    <section class="banner" id="sec">
-        <header>
-            <a href="#" class="logo"><img src="../Images/israel.png" alt="israel"></a>
-            <ul class="links">
-                <h1>All repositories</h1>
-                <br>
-                <li><a href="https://github.com/MatveyGuralskiy/DevOps-Tools-Website" target="_blank"> 🛠️ DevOps-Tools
-                        Website </a></li>
-                <li><a href="https://github.com/MatveyGuralskiy/AWS" target="_blank"> 🌥️ AWS </a></li>
-                <li><a href="https://github.com/MatveyGuralskiy/Docker-Kubernetes" target="_blank"> 🐳 Docker and
-                        Kubernetes </a></li>
-                <li><a href="https://github.com/MatveyGuralskiy/Ansible" target="_blank">🔧 Ansible</a></li>
-                <li><a href="https://github.com/MatveyGuralskiy/Jenkins" target="_blank">✏️ Jenkins </a></li>
-                <li><a href="https://github.com/MatveyGuralskiy/Leet-Code" target="_blank">⚡ Leet-Code Solutions</a>
-                </li>
-                <li><a href="https://github.com/MatveyGuralskiy/Terraform" target="_blank"> 🌑 Terraform</a></li>
-                <li><a href="https://github.com/MatveyGuralskiy/HTML-CSS" target="_blank">⚛️ HTML&CSS&JavaScript </a>
-                </li>
-                <li><a href="https://github.com/MatveyGuralskiy/Python-scripts" target="_blank">🐍 Python Scripts</a>
-                </li>
-                <li><a href="https://github.com/MatveyGuralskiy/Networking" target="_blank">🌐 Networking Essentials for
-                        DevOps Engineers</a></li>
-                <li><a href="https://github.com/MatveyGuralskiy/Bash-scripts" target="_blank">🐧 Bash Scripts</a></li>
-                <li><a href="https://github.com/MatveyGuralskiy/Flask-FirstSite" target="_blank">🚀 Flask-FirstSite</a>
-                </li>
-            </ul>
-            <div id="toggle" onclick="toggle()"></div>
-        </header>
-    </section>
-    <div id="navigation">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./project.html">Projects</a></li>
-            <li><a href="./repositories.html">Repositories</a></li>
-            <li><a href="./resume.html">Resume</a></li>
-            <li><a href="./certifications.html">Certifications</a></li>
-            <li><a href="mailto:mathewguralskiy@gmail.com">Contact</a></li>
-        </ul>
-    </div>
+    <div class="blur-wrapper"></div>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="../index.html"><img src="../Images/other/israel.png" alt="israel"></a>
+        </div>
+        <div class="mode-toggle">
+            <label class="switch">
+                <input type="checkbox" id="modeSwitch">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div id="toggle" class="menu-button" aria-label="toggle navigation">
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+        </div>
+        <div class="nav-links" id="navigation">
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="project.html">Projects</a>
+            <a href="repositories.html">Repositories</a>
+            <a href="resume.html">Resume</a>
+            <a href="certifications.html">Certifications</a>
+            <a href="mailto:mathewguralskiy@gmail.com">Contact</a>
+        </div>
+    </nav>
 
+    <main class="hero">
+        <div class="hero-content">
+            <h1 class="hero-name">
+                My Repositories
+                <a href="https://github.com/MatveyGuralskiy" target="_blank" rel="noopener noreferrer">
+                    <img src="../Images/social-media/github-large.png" alt="GitHub Logo" class="github-logo"></a>
+            </h1>
+            <p class="hero-description">Explore my GitHub repositories showcasing various DevOps tools and technologies
+            </p>
+
+            <div class="repository-grid">
+                <a href="https://github.com/MatveyGuralskiy/DribbleData" target="_blank" class="repository-card">
+                    <span class="repo-icon">🏀</span>
+                    <h3>DribbleData</h3>
+                </a>
+
+                <a href="https://github.com/MatveyGuralskiy/FlaskPipeline" target="_blank" class="repository-card">
+                    <span class="repo-icon">🛢️</span>
+                    <h3>FlaskPipeline</h3>
+                </a>
+
+                <a href="https://github.com/MatveyGuralskiy/GCP" target="_blank" class="repository-card">
+                    <span class="repo-icon">☁️</span>
+                    <h3>GCP</h3>
+                </a>
+
+                <a href="https://github.com/MatveyGuralskiy/Auto-Deploy" target="_blank" class="repository-card">
+                    <span class="repo-icon">💥</span>
+                    <h3>Auto-Deploy</h3>
+                </a>
+
+                <a href="https://github.com/MatveyGuralskiy/DevOps-Tools-Website" target="_blank"
+                    class="repository-card">
+                    <span class="repo-icon">🛠️</span>
+                    <h3>DevOps-Tools Website</h3>
+                </a>
+
+                <a href="https://github.com/MatveyGuralskiy/AWS" target="_blank" class="repository-card">
+                    <span class="repo-icon">🌥️</span>
+                    <h3>AWS</h3>
+                </a>
+
+                <a href="https://github.com/MatveyGuralskiy/Docker-Kubernetes" target="_blank" class="repository-card">
+                    <span class="repo-icon">🐳</span>
+                    <h3>Docker and Kubernetes</h3>
+                </a>
+
+                <a href="https://github.com/MatveyGuralskiy/Ansible" target="_blank" class="repository-card">
+                    <span class="repo-icon">🔧</span>
+                    <h3>Ansible</h3>
+                </a>
+
+                <a href="https://github.com/MatveyGuralskiy/Jenkins" target="_blank" class="repository-card">
+                    <span class="repo-icon">✏️</span>
+                    <h3>Jenkins</h3>
+                </a>
+
+                <a href="https://github.com/MatveyGuralskiy/Leet-Code" target="_blank" class="repository-card">
+                    <span class="repo-icon">⚡</span>
+                    <h3>Leet-Code Solutions</h3>
+                </a>
+
+                <a href="https://github.com/MatveyGuralskiy/Terraform" target="_blank" class="repository-card">
+                    <span class="repo-icon">🌑</span>
+                    <h3>Terraform</h3>
+                </a>
+
+                <a href="https://github.com/MatveyGuralskiy/HTML-CSS" target="_blank" class="repository-card">
+                    <span class="repo-icon">⚛️</span>
+                    <h3>HTML & CSS & JavaScript</h3>
+                </a>
+
+                <a href="https://github.com/MatveyGuralskiy/Python-scripts" target="_blank" class="repository-card">
+                    <span class="repo-icon">🐍</span>
+                    <h3>Python Scripts</h3>
+                </a>
+
+                <a href="https://github.com/MatveyGuralskiy/Networking" target="_blank" class="repository-card">
+                    <span class="repo-icon">🌐</span>
+                    <h3>Networking Essentials</h3>
+                </a>
+
+                <a href="https://github.com/MatveyGuralskiy/Bash-scripts" target="_blank" class="repository-card">
+                    <span class="repo-icon">🐧</span>
+                    <h3>Bash Scripts</h3>
+                </a>
+
+                <a href="https://github.com/MatveyGuralskiy/Flask-FirstSite" target="_blank" class="repository-card">
+                    <span class="repo-icon">🚀</span>
+                    <h3>Flask-FirstSite</h3>
+                </a>
+            </div>
+        </div>
+    </main>
     <script src="../JavaScript/main.js"></script>
-    </div>
+
 </body>
 
 </html>

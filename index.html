@@ -4,55 +4,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matvey Guralskiy Portfolio</title>
+    <title>Matvey Guralskiy - DevOps Engineer</title>
+    <link rel="website icon" type="png" href="https://cdn-icons-png.flaticon.com/512/12081/12081089.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://matveyguralskiy.com">
+    <meta property="og:title" content="Matvey Guralskiy - Portfolio Website">
+    <meta property="og:description"
+        content="A professional portfolio showcasing my certifications, resume, achievements, and personal insights, reflecting my expertise and passion in DevOps and solution architecture.">
+    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/12081/12081089.png">
+    <meta property="twitter:url" content="https://matveyguralskiy.com">
+    <meta property="twitter:title" content="Matvey Guralskiy - Portfolio Website">
+    <meta property="twitter:description"
+        content="A professional portfolio showcasing my certifications, resume, achievements, and personal insights, reflecting my expertise and passion in DevOps and solution architecture.">
+    <meta property="twitter:image" content="https://cdn-icons-png.flaticon.com/512/12081/12081089.png">
     <link rel="stylesheet" href="CSS/main.css">
-    <link rel="website icon" type="png" href="Images/resume.png">
-    <meta name="description" content="My Website with Projects, links to social media and more">
 </head>
 
 <body>
-    <section class="banner" id="sec">
-        <header>
-            <a href="#" class="logo"><img src="Images/israel.png" alt="israel"></a>
-            <div id="toggle" onclick="toggle()"></div>
-        </header>
-        <div class="content">
-            <h2>Hi there 🖐 <br> I'm <span>Matvey Guralskiy</span></h2>
-            <br>
-            <p>
-                DevOps engineer who loves automating how software is made and delivered.<br>
-                I'm all about making things better all the time. I'm super dedicated and always learning new stuff to
-                make a real impact on how technology and businesses work.
-            </p>
-            <a href="Html/about.html" id="know">Know More</a>
+    <div class="blur-wrapper"></div>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="index.html"><img src="Images/other/israel.png" alt="israel"></a>
+        </div>
+        <div class="mode-toggle">
+            <label class="switch">
+                <input type="checkbox" id="modeSwitch">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div id="toggle" class="menu-button" aria-label="toggle navigation">
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+        </div>
+        <div class="nav-links" id="navigation">
+            <a href="./index.html">Home</a>
+            <a href="./Html/about.html">About</a>
+            <a href="./Html/project.html">Projects</a>
+            <a href="./Html/repositories.html">Repositories</a>
+            <a href="./Html/resume.html">Resume</a>
+            <a href="./Html/certifications.html">Certifications</a>
+            <a href="mailto:mathewguralskiy@gmail.com">Contact</a>
+        </div>
+    </nav>
+
+    <main class="hero">
+        <div class="hero-content">
+            <h1 class="hero-name">Matvey Guralskiy</h1>
+            <p class="hero-title">DevOps Engineer</p>
+            <div class="hero-description">
+                <p>Automating software delivery with passion and precision. Dedicated to continuous improvement and
+                    innovation in technology.</p>
+            </div>
+            <div class="cta-container">
+                <a href="Html/about.html" class="cta-button">Know more</a>
+            </div>
         </div>
 
-        <ul class="sci">
-            <li><a href="https://github.com/MatveyGuralskiy" target="_blank"><img src="Images/github.png"
-                        alt="github"></a></li>
-            <li><a href="https://www.linkedin.com/in/matveyguralskiy/" target="_blank"><img src="Images/linkedin.png"
-                        alt="linkedin"></a>
-            </li>
-            <li><a href="https://www.instagram.com/matvey_guralskiy/" target="_blank"><img src="Images/instagram.png"
-                        alt="instagram"></a></li>
-        </ul>
-        <img class="my_photo" src="Images/my_photo.png" alt="my_photo">
-    </section>
+        <div class="profile-container">
+            <div class="profile-flip-card">
+                <div class="profile-front">
+                    <img src="Images/photo/front-profile.png" alt="Front Profile" class="profile-image">
+                </div>
+                <div class="profile-back">
+                    <img src="Images/photo/back-profile.png" alt="Back Profile" class="profile-image">
+                </div>
+            </div>
+        </div>
 
-    <div id="navigation">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Html/about.html">About</a></li>
-            <li><a href="Html/project.html">Projects</a></li>
-            <li><a href="Html/repositories.html">Repositories</a></li>
-            <li><a href="Html/resume.html">Resume</a></li>
-            <li><a href="Html/certifications.html">Certifications</a></li>
-            <li><a href="mailto:mathewguralskiy@gmail.com">Contact</a></li>
-        </ul>
+
+        <div class="social-links">
+            <a href="https://github.com/MatveyGuralskiy" target="_blank" class="social-link">
+                <img src="Images/social-media/github.png" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/matveyguralskiy/" target="_blank" class="social-link">
+                <img src="Images/social-media/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.instagram.com/matvey_guralskiy/" target="_blank" class="social-link">
+                <img src="Images/social-media/instagram.png" alt="Instagram">
+            </a>
+            <a href="mailto:mathewguralskiy@gmail.com" class="social-link">
+                <img src="Images/social-media/mail.png" alt="Email">
+            </a>
+        </div>
+    </main>
+    <div class="mobile-buttons-grid">
+        <a href="Html/project.html" class="mobile-button-square">Projects</a>
+        <a href="Html/repositories.html" class="mobile-button-square">Repositories</a>
+        <a href="Html/resume.html" class="mobile-button-square">Resume</a>
+        <a href="Html/certifications.html" class="mobile-button-square">Certifications</a>
     </div>
-
     <script src="JavaScript/main.js"></script>
-
 </body>
 
 </html>
