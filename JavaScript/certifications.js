@@ -47,6 +47,13 @@ const certificationData = {
         link: 'https://www.credly.com/badges/5f745ef9-f538-4174-b720-5822421954d4/public_url',
         tags: ['AWS', 'Development', 'Cloud', 'Applications', 'CI/CD', 'SDK', 'API', 'Serverless', 'DynamoDB', 'S3', 'Lambda', 'API Gateway', 'CloudWatch', 'X-Ray', 'IAM', 'Cognito', 'SQS', 'SNS', 'CloudFormation']
     },
+    'aws-sa-pro': {
+        title: 'AWS Certified Solutions Architect Professional',
+        description: 'Focuses on the design of complex, scalable, and resilient cloud architectures across diverse business domains. This role is ideal for individuals with extensive experience in AWS Cloud or large-scale enterprise infrastructure. While the position does not require deep software development expertise, a strong understanding of automation, infrastructure as code, and architectural trade-offs is essential.',
+        image: '../Images/AWS-5.png',
+        link: 'https://cp.certmetrics.com/amazon/en/public/verify/credential/15d6e080a64344b8b16df5e355f0a54e',
+        tags: ['AWS', 'Architecture', 'Cloud', 'Solutions', 'Security', 'Networking', 'Cost Optimization', 'Service Catalog', 'IoT', 'EFS', 'Organizations', 'Security Hub', 'CloudFront', 'Lambda', 'Migration', 'CloudWatch', 'IAM', 'SQS', 'Control Tower']
+    },
     'aws-sa': {
         title: 'AWS Certified Solutions Architect Associate',
         description: 'Associate is focused on the design of cost and performance optimized solutions. This is an ideal starting point for candidates with AWS Cloud or strong on-premises IT experience. This exam does not require deep hands-on coding experience, although familiarity with basic programming concepts would be an advantage',
