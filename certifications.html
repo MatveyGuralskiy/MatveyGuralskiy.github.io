@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matvey Guralskiy - Certifications</title>
+    <link rel="website icon" type="png" href="https://cdn-icons-png.flaticon.com/512/12081/12081089.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://matveyguralskiy.com">
+    <meta property="og:title" content="Matvey Guralskiy - DevOps Engineer">
+    <meta property="og:description"
+        content="A professional portfolio showcasing my certifications, resume, achievements, and personal insights, reflecting my expertise and passion in DevOps and solution architecture.">
+    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/12081/12081089.png">
+
+    <meta property="twitter:url" content="https://matveyguralskiy.com">
+    <meta property="twitter:title" content="Matvey Guralskiy - DevOps Engineer">
+    <meta property="twitter:description"
+        content="A professional portfolio showcasing my certifications, resume, achievements, and personal insights, reflecting my expertise and passion in DevOps and solution architecture.">
+    <meta property="twitter:image" content="https://cdn-icons-png.flaticon.com/512/12081/12081089.png">
+
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/certifications.css">
+</head>
+
+<body>
+    <div class="blur-wrapper"></div>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="../index.html"><img src="../Images/other/israel.png" alt="israel"></a>
+        </div>
+        <div class="mode-toggle">
+            <label class="switch">
+                <input type="checkbox" id="modeSwitch">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div id="toggle" class="menu-button" aria-label="toggle navigation">
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+        </div>
+        <div class="nav-links" id="navigation">
+            <a href="../index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./project.html">Projects</a>
+            <a href="./repositories.html">Repositories</a>
+            <a href="./resume.html">Resume</a>
+            <a href="./certifications.html">Certifications</a>
+            <a href="mailto:mathewguralskiy@gmail.com">Contact</a>
+        </div>
+    </nav>
+
+    <main class="certifications-section">
+        <div class="certifications-header">
+            <h1 class="certifications-title">My Certifications</h1>
+            <p class="certifications-description">Dive into my comprehensive collection of industry-recognized
+                certifications that showcase my expertise in cloud computing, DevOps practices, and Linux systems
+                administration. Each certification represents a milestone in my professional journey, demonstrating my
+                commitment to continuous learning and mastery of cutting-edge technologies.</p>
+        </div>
+
+        <div class="certifications-grid">
+            <div class="certification-card" data-cert="gcp">
+                <img src="../Images/GCP.png" alt="GCP">
+                <figcaption>GCP<br> Cloud DevOps Professional</figcaption>
+            </div>
+            <div class="certification-card" data-cert="gcp-arch">
+                <img src="../Images/GCP-2.png" alt="GCP-2">
+                <figcaption>GCP<br> Professional Cloud Architect</figcaption>
+            </div>
+            <div class="certification-card" data-cert="aws-sa-pro">
+                <img src="../Images/AWS-5.png" alt="AWS-5">
+                <figcaption>AWS<br> Solution Architect Professional</figcaption>
+            </div>
+            <div class="certification-card" data-cert="aws-devops">
+                <img src="../Images/AWS-3.png" alt="AWS-3">
+                <figcaption>AWS<br> DevOps Professional</figcaption>
+            </div>
+            <div class="certification-card" data-cert="aws-sys">
+                <img src="../Images/AWS-4.png" alt="AWS-4">
+                <figcaption>AWS<br> SysOps Administrator</figcaption>
+            </div>
+            <div class="certification-card" data-cert="aws-dev">
+                <img src="../Images/AWS-2.png" alt="AWS-2">
+                <figcaption>AWS<br> Developer Associate</figcaption>
+            </div>
+            <div class="certification-card" data-cert="aws-sa">
+                <img src="../Images/AWS.png" alt="AWS">
+                <figcaption>AWS<br> Solution Architect Associate</figcaption>
+            </div>
+            <div class="certification-card" data-cert="terraform">
+                <img src="../Images/Terraform-Associate.png" alt="Terraform">
+                <figcaption>HashiCorp<br> Terraform Associate 003</figcaption>
+            </div>
+            <div class="certification-card" data-cert="lpic-1">
+                <img src="../Images/LPIC-1.png" alt="LPIC-1">
+                <figcaption>Linux Professional Institute<br> LPIC-1</figcaption>
+            </div>
+            <div class="certification-card" data-cert="linux-essentials">
+                <img src="../Images/LinuxEssentials.png" alt="LPI Essentials">
+                <figcaption>Linux Professional Institute<br> Linux Essentials</figcaption>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal" id="certModal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <img src="" alt="" class="modal-image">
+            <h2 class="modal-title"></h2>
+            <p class="modal-description"></p>
+            <div class="modal-tags"></div>
+            <a href="#" class="modal-link" target="_blank">View Official Certificate</a>
+        </div>
+    </div>
+
+    <script src="../JavaScript/main.js"></script>
+    <script src="../JavaScript/certifications.js"></script>
+</body>
+
+</html>
