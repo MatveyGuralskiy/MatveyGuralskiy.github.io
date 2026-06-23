@@ -402,7 +402,7 @@ body.night-mode .current-badge {
 }
 
 .cta-button {
-    display: inline-block;
+    display: block;
     padding: 1rem 2rem;
     background: var(--clr-primary);
     color: var(--clr-light);
@@ -416,6 +416,46 @@ body.night-mode .current-badge {
     text-decoration: none;
     margin-top: 1rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.cta-button-secondary {
+    display: block;
+    padding: 1rem 2rem;
+    background: transparent;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    text-align: center;
+    border: 2px solid var(--clr-primary);
+    color: var(--clr-primary);
+}
+
+.cta-button-secondary:hover {
+    background: var(--clr-primary);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.day-mode .cta-button-secondary {
+    border-color: var(--clr-primary);
+    color: var(--clr-primary);
+}
+
+body.night-mode .cta-button-secondary {
+    border-color: var(--clr-light);
+    color: var(--clr-light);
+}
+
+body.night-mode .cta-button-secondary:hover {
+    background: var(--clr-light);
+    color: #1a1a2e;
 }
 
 .cta-button:hover {
