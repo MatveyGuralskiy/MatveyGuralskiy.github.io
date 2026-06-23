@@ -458,6 +458,67 @@ body.night-mode .cta-button-secondary:hover {
     color: #1a1a2e;
 }
 
+.resume-btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 1.2rem;
+    width: 100%;
+}
+
+.resume-btn {
+    display: block;
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.resume-btn-primary {
+    background: #2563eb;
+    color: #fff;
+    border: 2px solid #2563eb;
+    box-shadow: 0 4px 14px rgba(37,99,235,0.35);
+}
+
+.resume-btn-primary:hover {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37,99,235,0.45);
+}
+
+.resume-btn-outline {
+    background: transparent;
+    color: #2563eb;
+    border: 2px solid #2563eb;
+}
+
+.resume-btn-outline:hover {
+    background: #2563eb;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(37,99,235,0.35);
+}
+
+body.night-mode .resume-btn-outline {
+    color: #a5b4fc;
+    border-color: #a5b4fc;
+}
+
+body.night-mode .resume-btn-outline:hover {
+    background: #a5b4fc;
+    color: #1a1a2e;
+}
+
 .cta-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
