@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.resume-image-container').forEach(container => {
         container.addEventListener('click', () => {
             const image = container.querySelector('.resume-image');
-            const pdfPath = container.parentElement.querySelector('.cta-button').href;
+            const pdfPath = (container.parentElement.querySelector('.resume-btn-primary') || container.parentElement.querySelector('.cta-button')).href;
             openPreview(image.src, pdfPath);
         });
     });
