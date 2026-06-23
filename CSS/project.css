@@ -57,6 +57,214 @@
     padding: 2rem;
 }
 
+/* ── Mobile Apps Section ── */
+.apps-section {
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    padding: 0 2rem;
+}
+
+.apps-section-title {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--clr-light), var(--clr-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+}
+
+.apps-section-subtitle {
+    color: var(--clr-light);
+    opacity: 0.7;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    gap: 2rem;
+}
+
+.app-card {
+    border-radius: 20px;
+    overflow: hidden;
+    background: #1e1b2e;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.day-mode .app-card {
+    background: #f4f2ff;
+    border: 1px solid rgba(124,58,237,0.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.app-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.app-card-bg {
+    padding: 2rem 2rem 1rem;
+}
+
+.obsid-bg {
+    background: linear-gradient(135deg, #0D0A14 0%, #1a0f2e 60%, #2d1b69 100%);
+}
+
+.fivory-bg {
+    background: linear-gradient(135deg, #c0392b 0%, #e74c3c 50%, #ff6b6b 100%);
+}
+
+.app-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.app-logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.app-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+}
+
+.app-tagline {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+    margin: 0.2rem 0 0;
+}
+
+.app-screenshots {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.app-screenshot {
+    width: 30%;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+}
+
+.app-screenshot:nth-child(2) {
+    transform: scale(1.06);
+}
+
+.app-card:hover .app-screenshot:nth-child(2) {
+    transform: scale(1.1);
+}
+
+.app-card-body {
+    padding: 1.5rem 2rem 2rem;
+}
+
+.app-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #94a3b8;
+    margin-bottom: 1.2rem;
+}
+
+.day-mode .app-description {
+    color: #4a4a6a;
+}
+
+.day-mode .app-name {
+    color: #fff;
+}
+
+.day-mode .apps-section-subtitle {
+    color: #555;
+    opacity: 1;
+}
+
+.app-links {
+    display: flex;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+    margin-top: 1.2rem;
+}
+
+.store-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1.1rem;
+    border-radius: 10px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    letter-spacing: 0.2px;
+}
+
+.badge-web {
+    background: rgba(124, 58, 237, 0.12);
+    color: var(--clr-primary);
+    border: 1px solid rgba(124, 58, 237, 0.3);
+}
+
+.badge-web:hover {
+    background: var(--clr-primary);
+    color: #fff;
+}
+
+.badge-apple {
+    background: #111;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+.badge-apple:hover {
+    background: #333;
+}
+
+.badge-google {
+    background: #fff;
+    color: #222;
+    border: 1px solid #ddd;
+}
+
+.badge-google:hover {
+    background: #f1f1f1;
+}
+
+.night-mode .badge-google {
+    background: #2a2a3a;
+    color: #e2e8f0;
+    border-color: #3a3a4a;
+}
+
+.night-mode .badge-google:hover {
+    background: #3a3a4a;
+}
+
+.night-mode .badge-web {
+    background: rgba(124, 58, 237, 0.2);
+    color: #a78bfa;
+    border-color: rgba(124, 58, 237, 0.4);
+}
+
+@media (max-width: 600px) {
+    .apps-grid { grid-template-columns: 1fr; }
+    .app-screenshot { width: 29%; }
+}
+
 .project-card {
     background: var(--card-bg, rgba(255, 255, 255, 0.9));
     border-radius: 15px;
