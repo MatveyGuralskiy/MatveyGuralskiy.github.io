@@ -5,7 +5,7 @@
 
 /* ---------- 1. Typography ---------- */
 * {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 h1, h2, h3,
@@ -19,7 +19,7 @@ h1, h2, h3,
 .career-title,
 .app-name,
 .project-title {
-    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-family: 'Bricolage Grotesque', 'Geist', sans-serif;
     letter-spacing: -0.02em;
 }
 
@@ -311,7 +311,7 @@ body.day-mode .navbar {
         position: absolute;
         left: 1.2rem;
         bottom: 1rem;
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Bricolage Grotesque', sans-serif;
         font-weight: 700;
         font-size: clamp(3.5rem, 18vw, 6rem);
         letter-spacing: 0.08em;
@@ -347,7 +347,7 @@ body.day-mode .navbar {
         max-width: 460px;
         margin: 0 auto;
         padding: 0.85rem 0.4rem !important;
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Bricolage Grotesque', sans-serif;
         font-size: clamp(1.9rem, 8.5vw, 2.9rem) !important;
         font-weight: 700;
         line-height: 1.05;
@@ -518,12 +518,13 @@ body.day-mode .navbar {
     width: 50%;
     height: 100%;
     background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.45), transparent);
-    transform: skewX(-20deg);
-    transition: left 0.6s ease;
+    transform: translateX(0) skewX(-20deg);
+    transition: transform 0.6s ease;
+    will-change: transform;
 }
 
 .cta-button:hover::before {
-    left: 130%;
+    transform: translateX(420%) skewX(-20deg);
 }
 
 .cta-button:hover,
@@ -1366,14 +1367,20 @@ body.day-mode .bg-beam {
 }
 
 .tile-intro .hero-name {
-    font-size: clamp(2.8rem, 5.5vw, 4.6rem);
-    margin-bottom: 0.6rem;
+    font-size: clamp(3.1rem, 6.4vw, 5.6rem);
+    line-height: 0.9;
+    letter-spacing: -0.035em;
+    font-weight: 700;
+    text-wrap: balance;
+    margin-bottom: 0.75rem;
 }
 
 .tile-intro .hero-title {
-    font-size: clamp(1.3rem, 2.4vw, 1.8rem);
+    font-size: clamp(1.25rem, 2.3vw, 1.7rem);
+    font-weight: 600;
+    letter-spacing: -0.01em;
     color: var(--clr-primary);
-    margin-bottom: 1rem;
+    margin-bottom: 1.1rem;
     animation: fadeInUp 0.8s ease-out 0.2s backwards;
 }
 
@@ -1525,7 +1532,7 @@ body.day-mode .term-head {
 }
 
 .stat-num {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Bricolage Grotesque', sans-serif;
     font-size: clamp(1.7rem, 2.6vw, 2.4rem);
     font-weight: 700;
     background: var(--grad-accent);
@@ -1572,7 +1579,7 @@ body.day-mode .term-head {
 }
 
 .tile-link-name {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Bricolage Grotesque', sans-serif;
     font-weight: 600;
     font-size: 1.02rem;
 }
@@ -1715,7 +1722,7 @@ body.day-mode .term-head {
     outline: none;
     color: var(--clr-light);
     font-size: 1rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Geist', sans-serif;
 }
 
 .cmdk-input::placeholder {
@@ -1829,7 +1836,7 @@ body.day-mode .term-head {
     top: -2.4rem;
     left: 50%;
     transform: translateX(-50%);
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Bricolage Grotesque', sans-serif;
     font-weight: 700;
     font-size: clamp(4rem, 13vw, 10.5rem);
     line-height: 1;
@@ -2249,4 +2256,422 @@ body.lightbox-open {
 
 @media (prefers-reduced-motion: reduce) {
     .lightbox-cell img { animation: none; }
+}
+
+/* ============================================================
+   21. HOME REDESIGN — oversized editorial hero
+   ============================================================ */
+.home { overflow: clip; }
+
+/* ---- HERO ---- */
+.hx-hero {
+    position: relative;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: clamp(6.5rem, 12vh, 9rem) clamp(1.4rem, 5vw, 4.5rem) 5.5rem;
+}
+
+.hx-hero-grid {
+    display: grid;
+    grid-template-columns: 1.12fr 0.88fr;
+    align-items: center;
+    gap: clamp(2rem, 5vw, 5rem);
+}
+
+.hx-copy .hero-badge { margin-bottom: 0.4rem; }
+
+.hx-name {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 700;
+    font-size: clamp(3.2rem, 9.8vw, 9rem);
+    line-height: 0.9;
+    letter-spacing: -0.045em;
+    margin: 1.1rem 0 0.5rem;
+    padding-bottom: 0.14em;
+    background: linear-gradient(180deg, var(--clr-light) 30%, color-mix(in srgb, var(--clr-light) 55%, transparent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hx-role {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 600;
+    font-size: clamp(1.5rem, 3.4vw, 2.7rem);
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+}
+
+.hx-role-accent {
+    background: var(--grad-accent);
+    background-size: 220% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: hxShine 5s linear infinite;
+}
+
+@keyframes hxShine { to { background-position: 220% center; } }
+
+.hx-desc {
+    font-size: clamp(1.02rem, 1.35vw, 1.22rem);
+    line-height: 1.65;
+    max-width: 44ch;
+    opacity: 0.82;
+    margin-bottom: 2.2rem;
+    text-wrap: pretty;
+}
+
+.hx-copy .intro-actions { display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; }
+.hx-copy .social-links { position: static; margin: 0; display: flex; gap: 0.8rem; }
+
+/* visual */
+.hx-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 360px;
+}
+
+.hx-photo-glow {
+    position: absolute;
+    inset: 6%;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--glow), transparent 68%);
+    filter: blur(55px);
+    z-index: 0;
+}
+
+.hx-visual .profile-container {
+    position: relative;
+    z-index: 2;
+    width: clamp(250px, 32vw, 420px);
+    height: clamp(250px, 32vw, 420px);
+    margin: 0;
+}
+
+.hx-chip {
+    position: absolute;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    border-radius: 999px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--clr-light);
+    background: var(--surface);
+    border: 1px solid var(--stroke-hover);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-1);
+    animation: hxFloat 6s ease-in-out infinite;
+}
+.hx-chip img { width: 18px; height: 18px; object-fit: contain; }
+.hx-chip--1 { top: 1%; left: -5%; animation-delay: 0s; }
+.hx-chip--2 { bottom: 20%; left: -12%; animation-delay: 1.4s; }
+.hx-chip--3 { bottom: 1%; right: -4%; animation-delay: 2.8s; }
+.hx-chip--4 { top: 7%; right: -7%; animation-delay: 0.7s; }
+.hx-chip--5 { top: 46%; left: -14%; animation-delay: 3.4s; }
+.hx-chip--6 { top: 40%; right: -12%; animation-delay: 2.1s; }
+
+@keyframes hxFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-11px); } }
+
+.hx-scroll {
+    position: absolute;
+    bottom: 1.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    color: var(--clr-light);
+    opacity: 0.55;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+}
+.hx-scroll:hover { opacity: 0.9; }
+.hx-scroll svg { width: 18px; height: 18px; animation: hxBob 1.9s ease-in-out infinite; }
+@keyframes hxBob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
+
+/* ---- MARQUEE spacing in new flow ---- */
+.home .marquee { margin: 1rem 0; }
+
+/* ---- NUMBERS + TERMINAL band ---- */
+.hx-band {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: clamp(3.5rem, 9vh, 6.5rem) clamp(1.4rem, 5vw, 4.5rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 5vw, 4.5rem);
+    align-items: center;
+}
+
+.hx-band-label {
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.26em;
+    font-size: 0.74rem;
+    color: var(--clr-primary);
+    opacity: 0.85;
+    margin-bottom: 1.9rem;
+}
+
+.hx-numbers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4rem 1.6rem; }
+.hx-stat { display: flex; flex-direction: column; }
+.hx-stat .stat-num {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.6rem, 5.2vw, 4.2rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    background: var(--grad-accent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hx-stat .stat-label { margin-top: 0.5rem; font-size: 0.92rem; opacity: 0.62; }
+
+.hx-band .tile-terminal { grid-column: auto; grid-row: auto; margin: 0; min-height: 320px; align-self: stretch; }
+
+/* ---- EXPLORE editorial rows ---- */
+.hx-explore {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: clamp(2rem, 6vh, 4.5rem) clamp(1.4rem, 5vw, 4.5rem) clamp(5rem, 11vh, 8rem);
+}
+.hx-explore-title {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    letter-spacing: -0.03em;
+    line-height: 1;
+}
+.hx-explore-sub { opacity: 0.7; margin-top: 0.7rem; font-size: 1.06rem; }
+
+.hx-explore-rows { margin-top: 2.6rem; border-top: 1px solid var(--stroke); }
+.hx-row {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: 1.6rem;
+    padding: 1.7rem 0.6rem;
+    border-bottom: 1px solid var(--stroke);
+    text-decoration: none;
+    color: var(--clr-light);
+    transition: padding 0.4s var(--ease-spring), background 0.3s ease;
+}
+.hx-row-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--clr-primary);
+    opacity: 0.7;
+}
+.hx-row-name {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 3.4vw, 2.5rem);
+    letter-spacing: -0.02em;
+    transition: color 0.3s ease;
+}
+.hx-row-desc { justify-self: end; text-align: right; opacity: 0.58; font-size: 0.95rem; max-width: 32ch; }
+.hx-row-arrow {
+    width: 26px;
+    height: 26px;
+    color: var(--clr-primary);
+    transform: translateX(-8px);
+    opacity: 0.45;
+    transition: transform 0.35s var(--ease-spring), opacity 0.3s ease;
+}
+
+@media (hover: hover) {
+    .hx-row:hover {
+        padding-left: 1.5rem;
+        background: linear-gradient(90deg, color-mix(in srgb, var(--clr-primary) 9%, transparent), transparent 70%);
+    }
+    .hx-row:hover .hx-row-name { color: var(--clr-primary); }
+    .hx-row:hover .hx-row-arrow { transform: translateX(0); opacity: 1; }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+    .hx-hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    /* shrink the visual to the photo size and centre it so chips hug the photo, not the screen edges */
+    .hx-visual {
+        order: -1;
+        width: min(82vw, 360px);
+        margin: 1rem auto 0;
+        min-height: auto;
+    }
+    .hx-visual .profile-container {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+    .hx-band { grid-template-columns: 1fr; }
+    .hx-row-desc { display: none; }
+    .hx-row { grid-template-columns: auto 1fr auto; gap: 1rem; }
+}
+
+@media (max-width: 560px) {
+    .hx-name { font-size: clamp(3rem, 15vw, 5rem); }
+    .hx-numbers-grid { gap: 1.8rem 1.2rem; }
+    .hx-chip { font-size: 0.72rem; padding: 6px 11px; }
+    .hx-chip--1 { left: -2%; }
+    .hx-chip--2 { left: -3%; }
+    .hx-chip--3 { right: -2%; }
+    .hx-chip--4 { right: -3%; }
+    /* keep the phone hero uncluttered: hide the two mid-row chips */
+    .hx-chip--5, .hx-chip--6 { display: none; }
+    .hx-photo-glow { filter: blur(38px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hx-chip, .hx-scroll svg, .hx-role-accent { animation: none; }
+}
+
+/* ============================================================
+   22. Unified editorial page headers (inner pages)
+   ============================================================ */
+.page-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.26em;
+    font-size: 0.74rem;
+    color: var(--clr-primary);
+    opacity: 0.9;
+    margin-bottom: 1.05rem;
+}
+.page-eyebrow::before {
+    content: '';
+    width: 26px;
+    height: 1.5px;
+    background: currentColor;
+    opacity: 0.55;
+}
+
+.projects-header.page-head,
+.certifications-header.page-head,
+.resume-header.page-head {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: clamp(7rem, 13vh, 9.5rem) clamp(1.4rem, 5vw, 4.5rem) clamp(2rem, 5vh, 3rem);
+    text-align: left;
+}
+
+.projects-title,
+.certifications-title,
+.resume-title {
+    text-align: left !important;
+    font-size: clamp(2.8rem, 7.5vw, 5.6rem) !important;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    padding-bottom: 0.08em;
+    margin: 0 0 1.1rem !important;
+}
+
+.projects-description,
+.certifications-description,
+.resume-description {
+    text-align: left !important;
+    max-width: 66ch;
+    margin: 0 !important;
+    font-size: clamp(1.02rem, 1.35vw, 1.18rem) !important;
+    line-height: 1.65 !important;
+    opacity: 0.8;
+}
+
+/* About: eyebrow + tighten hero heading */
+.hero-content .page-eyebrow { margin-bottom: 0.8rem; }
+.hero .hero-name { padding-bottom: 0.06em; }
+
+/* ============================================================
+   23. Certifications — premium cards (was bare floating badges)
+   ============================================================ */
+.certifications-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(228px, 1fr)) !important;
+    gap: 1.3rem !important;
+    max-width: 1440px !important;
+    margin: 0 auto !important;
+    padding: clamp(1rem, 3vh, 2rem) clamp(1.4rem, 5vw, 4.5rem) clamp(5rem, 11vh, 7.5rem) !important;
+}
+
+.certification-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.2rem !important;
+    padding: 2rem 1.3rem 1.5rem !important;
+    min-height: 268px;
+    background: var(--surface) !important;
+    border: 1px solid var(--stroke) !important;
+    border-radius: 20px !important;
+    box-shadow: var(--shadow-1) !important;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    text-align: center !important;
+    cursor: pointer;
+    transition: transform 0.4s var(--ease-spring), border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.certification-card img {
+    height: 116px !important;
+    width: auto !important;
+    max-width: 76% !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+    box-shadow: none !important;
+    filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.4));
+    transition: transform 0.4s var(--ease-spring) !important;
+}
+
+.certification-card figcaption {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0.32rem;
+    margin-top: auto !important;
+}
+.cert-issuer {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.71rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--clr-primary);
+    opacity: 0.9;
+}
+.cert-name {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 600;
+    font-size: 1.02rem;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: var(--clr-light);
+}
+
+.certification-card:hover {
+    transform: translateY(-6px) !important;
+    border-color: var(--stroke-hover) !important;
+    box-shadow: var(--shadow-2) !important;
+}
+.certification-card:hover img { transform: scale(1.07) rotate(-1.5deg); }
+
+@media (prefers-reduced-motion: reduce) {
+    .certification-card:hover img { transform: none; }
 }

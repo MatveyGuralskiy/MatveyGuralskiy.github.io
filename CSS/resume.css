@@ -157,7 +157,7 @@ body.day-mode {
     height: 20px;
     background: var(--clr-primary);
     border-radius: 50%;
-    transform: translateY(-50%) scale(0);
+    transform: translateY(-50%) scale(0.5);
     opacity: 0;
     animation: popCircle 0.5s ease-out forwards;
 }
@@ -212,7 +212,7 @@ body.day-mode {
 
 @keyframes popCircle {
     0% {
-        transform: translateY(-50%) scale(0);
+        transform: translateY(-50%) scale(0.5);
         opacity: 0;
     }
 

@@ -59,7 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
         '.goals ul li',
         '.repository-card',
         '.resume-card',
-        '.app-card'
+        '.app-card',
+        '.hx-copy',
+        '.hx-numbers',
+        '.hx-band .tile-terminal',
+        '.hx-explore-head',
+        '.hx-row'
     ].join(', ');
 
     const targets = document.querySelectorAll(revealSelector);
