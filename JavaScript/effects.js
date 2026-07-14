@@ -385,6 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { icon: ICONS.box, label: 'Repositories', hint: 'page', act: () => location.href = '/repositories/' },
             { icon: ICONS.file, label: 'Resume', hint: 'page', act: () => location.href = '/resume/' },
             { icon: ICONS.award, label: 'Certifications', hint: 'page', act: () => location.href = '/certifications/' },
+            { icon: ICONS.mail, label: 'Contact', hint: 'page', act: () => location.href = '/contact/' },
             { icon: ICONS.download, label: 'Download CV (PDF)', hint: 'action', act: () => location.href = '/PDF/resume-eng.pdf' },
             { icon: ICONS.mail, label: 'Send me an email', hint: 'action', act: () => location.href = 'mailto:mathewguralskiy@gmail.com' },
             { icon: ICONS.moon, label: 'Toggle day / night theme', hint: 'action', act: () => { const s = document.getElementById('modeSwitch'); if (s) { s.checked = !s.checked; s.dispatchEvent(new Event('change')); } } },

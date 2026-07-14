@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#05070d">
+    <title>Matvey Guralskiy - Contact</title>
+    <link rel="website icon" type="png" href="https://cdn-icons-png.flaticon.com/512/12081/12081089.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://matveyguralskiy.com/contact/">
+    <meta property="og:title" content="Matvey Guralskiy - Contact">
+    <meta property="og:description"
+        content="Get in touch with Matvey Guralskiy — DevOps Engineer. Reach out via email, LinkedIn, GitHub, or Instagram.">
+    <meta property="og:image" content="https://matveyguralskiy.com/Images/og/preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Matvey Guralskiy — DevOps Engineer">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta property="twitter:url" content="https://matveyguralskiy.com/contact/">
+    <meta property="twitter:title" content="Matvey Guralskiy - Contact">
+    <meta property="twitter:description"
+        content="Get in touch with Matvey Guralskiy — DevOps Engineer. Reach out via email, LinkedIn, GitHub, or Instagram.">
+    <meta property="twitter:image" content="https://matveyguralskiy.com/Images/og/preview.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/upgrade.css">
+
+    <style>
+        .contact-page {
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 8rem 1.5rem 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-head {
+            text-align: center;
+            max-width: 620px;
+            margin-bottom: 3rem;
+        }
+
+        .contact-eyebrow {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.82rem;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            color: var(--clr-primary);
+            opacity: 0.85;
+            margin-bottom: 0.9rem;
+        }
+
+        .contact-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: clamp(2.4rem, 8vw, 4rem);
+            line-height: 1.05;
+            margin: 0 0 1rem;
+        }
+
+        .contact-title .accent {
+            background: var(--grad-accent);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+
+        .contact-sub {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            opacity: 0.78;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.1rem;
+            width: 100%;
+            max-width: 720px;
+        }
+
+        .contact-card {
+            display: flex;
+            align-items: center;
+            gap: 1.1rem;
+            padding: 1.4rem 1.5rem;
+            border-radius: 20px;
+            text-decoration: none;
+            color: inherit;
+            background: color-mix(in srgb, var(--clr-dark) 55%, transparent);
+            border: 1px solid color-mix(in srgb, var(--clr-primary) 16%, transparent);
+            transition: transform 0.3s var(--ease-spring), border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body.day-mode .contact-card {
+            background: rgba(255, 255, 255, 0.65);
+            border-color: rgba(37, 99, 235, 0.15);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-4px);
+            border-color: color-mix(in srgb, var(--clr-primary) 55%, transparent);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+        }
+
+        body.day-mode .contact-card:hover {
+            box-shadow: 0 16px 38px rgba(37, 99, 235, 0.14);
+        }
+
+        .contact-icon {
+            flex-shrink: 0;
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: color-mix(in srgb, var(--clr-primary) 14%, transparent);
+            color: var(--clr-primary);
+            transition: background 0.3s ease, color 0.3s ease, transform 0.3s var(--ease-spring);
+        }
+
+        .contact-card:hover .contact-icon {
+            background: var(--grad-accent);
+            color: #fff;
+            transform: scale(1.06);
+        }
+
+        .contact-icon svg {
+            width: 26px;
+            height: 26px;
+        }
+
+        .contact-info {
+            min-width: 0;
+        }
+
+        .contact-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 1.08rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .contact-value {
+            font-size: 0.9rem;
+            opacity: 0.62;
+            font-family: 'JetBrains Mono', monospace;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .contact-arrow {
+            margin-left: auto;
+            color: var(--clr-primary);
+            opacity: 0;
+            transform: translateX(-8px);
+            transition: opacity 0.3s ease, transform 0.3s var(--ease-spring);
+            flex-shrink: 0;
+        }
+
+        .contact-card:hover .contact-arrow {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* copy toast */
+        .toast {
+            position: fixed;
+            left: 50%;
+            bottom: 2.2rem;
+            transform: translateX(-50%) translateY(20px);
+            background: var(--grad-accent);
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.92rem;
+            padding: 0.75rem 1.4rem;
+            border-radius: 999px;
+            box-shadow: 0 14px 36px rgba(56, 189, 248, 0.4);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease, transform 0.35s var(--ease-spring);
+            z-index: 9999;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        @media (max-width: 560px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-value {
+                font-size: 0.82rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <script>try { var m = localStorage.getItem("mode"); if (m) document.body.classList.add(m + "-mode"); } catch (e) { }</script>
+    <div class="blur-wrapper"></div>
+    <nav class="navbar">
+        <div class="nav-logo"></div>
+        <div class="mode-toggle">
+            <label class="switch">
+                <input type="checkbox" id="modeSwitch">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div id="toggle" class="menu-button" aria-label="toggle navigation">
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+        </div>
+        <div class="nav-links" id="navigation">
+            <a href="/">Home</a>
+            <a href="/about/">About</a>
+            <a href="/projects/">Projects</a>
+            <a href="/repositories/">Repositories</a>
+            <a href="/resume/">Resume</a>
+            <a href="/certifications/">Certifications</a>
+            <a href="/contact/">Contact</a>
+        </div>
+    </nav>
+
+    <main class="contact-page">
+        <div class="contact-head">
+            <p class="contact-eyebrow">Contact</p>
+            <h1 class="contact-title">Let's <span class="accent">connect</span></h1>
+            <p class="contact-sub">Open to DevOps roles, collaborations, and a good technical conversation.
+                Pick whichever channel works best for you.</p>
+        </div>
+
+        <div class="contact-grid">
+            <!-- Email: copy to clipboard (works everywhere, unlike mailto on Windows) -->
+            <a href="mailto:mathewguralskiy@gmail.com" class="contact-card" id="emailCard"
+                data-email="mathewguralskiy@gmail.com">
+                <span class="contact-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="16" x="2" y="4" rx="2" />
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                </span>
+                <div class="contact-info">
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value">mathewguralskiy@gmail.com</div>
+                </div>
+                <span class="contact-arrow" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="14" height="14" x="8" y="8" rx="2" /><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+                    </svg>
+                </span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/matveyguralskiy/" target="_blank" rel="noopener"
+                class="contact-card">
+                <span class="contact-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13Zm1.78 13.02H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z" />
+                    </svg>
+                </span>
+                <div class="contact-info">
+                    <div class="contact-label">LinkedIn</div>
+                    <div class="contact-value">in/matveyguralskiy</div>
+                </div>
+                <span class="contact-arrow" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7 17 17 7" /><path d="M7 7h10v10" />
+                    </svg>
+                </span>
+            </a>
+
+            <a href="https://github.com/MatveyGuralskiy" target="_blank" rel="noopener" class="contact-card">
+                <span class="contact-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.17c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.78 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.35.77 1.05.77 2.12v3.14c0 .3.21.66.8.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
+                    </svg>
+                </span>
+                <div class="contact-info">
+                    <div class="contact-label">GitHub</div>
+                    <div class="contact-value">MatveyGuralskiy</div>
+                </div>
+                <span class="contact-arrow" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7 17 17 7" /><path d="M7 7h10v10" />
+                    </svg>
+                </span>
+            </a>
+
+            <a href="https://www.instagram.com/matvey_guralskiy/" target="_blank" rel="noopener"
+                class="contact-card">
+                <span class="contact-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                    </svg>
+                </span>
+                <div class="contact-info">
+                    <div class="contact-label">Instagram</div>
+                    <div class="contact-value">@matvey_guralskiy</div>
+                </div>
+                <span class="contact-arrow" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7 17 17 7" /><path d="M7 7h10v10" />
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </main>
+
+    <div class="toast" id="toast">Email copied to clipboard</div>
+
+    <script>
+        (function () {
+            var card = document.getElementById('emailCard');
+            var toast = document.getElementById('toast');
+            if (!card) return;
+            var email = card.getAttribute('data-email');
+            function showToast(msg) {
+                toast.textContent = msg;
+                toast.classList.add('show');
+                clearTimeout(toast._t);
+                toast._t = setTimeout(function () { toast.classList.remove('show'); }, 2200);
+            }
+            card.addEventListener('click', function (e) {
+                // Copy the address instead of relying on a mail client (mailto often fails on Windows)
+                e.preventDefault();
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(email).then(function () {
+                        showToast('Email copied — ' + email);
+                    }).catch(function () { window.location.href = 'mailto:' + email; });
+                } else {
+                    var ta = document.createElement('textarea');
+                    ta.value = email; document.body.appendChild(ta); ta.select();
+                    try { document.execCommand('copy'); showToast('Email copied — ' + email); }
+                    catch (err) { window.location.href = 'mailto:' + email; }
+                    document.body.removeChild(ta);
+                }
+            });
+        })();
+    </script>
+    <script src="../JavaScript/main.js"></script>
+    <script src="../JavaScript/effects.js"></script>
+</body>
+
+</html>
