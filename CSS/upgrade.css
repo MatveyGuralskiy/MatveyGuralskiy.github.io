@@ -759,6 +759,14 @@ body:not(.day-mode) .tech-item img[alt="Flask Logo"] {
     filter: brightness(0) invert(1) drop-shadow(0 6px 10px rgba(0, 0, 0, 0.25));
 }
 
+/* Bulletproof: any dark-on-dark logo (Ansible / Flask / Bash) turns white in ANY dark theme,
+   on ANY page, regardless of class/alt — wins over hover/base filters via !important */
+body:not(.day-mode) img[src*="ansible"],
+body:not(.day-mode) img[src*="flask"],
+body:not(.day-mode) img[src*="bash"] {
+    filter: brightness(0) invert(1) drop-shadow(0 6px 10px rgba(0, 0, 0, 0.25)) !important;
+}
+
 /* Repository cards: real tech logos instead of emoji */
 .repo-logo {
     width: 46px;
