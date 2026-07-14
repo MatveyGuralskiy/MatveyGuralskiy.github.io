@@ -393,10 +393,14 @@ document.addEventListener('DOMContentLoaded', () => {
             { icon: ICONS.linkedin, label: 'Open LinkedIn', hint: 'link', act: () => window.open('https://www.linkedin.com/in/matveyguralskiy/', '_blank', 'noopener') }
         ];
 
+        const plat = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || navigator.userAgent || '';
+        const isMac = /mac|iphone|ipad|ipod/i.test(plat);
+        const kbdLabel = isMac ? '⌘K' : 'Ctrl K';
+
         const btn = document.createElement('button');
         btn.className = 'cmdk-btn';
         btn.setAttribute('aria-label', 'Open command palette');
-        btn.innerHTML = '<span class="cmdk-btn-label">Search</span><kbd>⌘K</kbd>';
+        btn.innerHTML = '<span class="cmdk-btn-label">Search</span><kbd>' + kbdLabel + '</kbd>';
         document.body.appendChild(btn);
 
         const overlay = document.createElement('div');

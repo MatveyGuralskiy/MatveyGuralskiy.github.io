@@ -1930,7 +1930,7 @@ body.day-mode .repository-card {
 
 /* arrow indicator re-uses the ::after slot (spotlight is disabled here) */
 .repository-card::after {
-    content: '→';
+    content: '\2192';
     position: absolute;
     inset: auto 1.3rem auto auto;
     background: none;

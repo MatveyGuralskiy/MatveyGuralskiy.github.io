@@ -203,7 +203,7 @@
                 <a href="/" class="cta-button">Back to Home</a>
                 <a href="/projects/" class="ghost-button">View Projects</a>
             </div>
-            <p class="error-hint">or press <kbd>⌘</kbd><kbd>K</kbd> to jump anywhere</p>
+            <p class="error-hint">or press <span id="errKbd"><kbd>⌘</kbd><kbd>K</kbd></span> to jump anywhere</p>
         </div>
     </main>
 
@@ -211,6 +211,11 @@
         try {
             var pathEl = document.querySelector('.err-path');
             if (pathEl) pathEl.textContent = decodeURIComponent(location.pathname) || '/unknown';
+            var plat = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || navigator.userAgent || '';
+            if (!/mac|iphone|ipad|ipod/i.test(plat)) {
+                var k = document.getElementById('errKbd');
+                if (k) k.innerHTML = '<kbd>Ctrl</kbd><kbd>K</kbd>';
+            }
         } catch (e) { }
     </script>
     <script src="/JavaScript/main.js"></script>
