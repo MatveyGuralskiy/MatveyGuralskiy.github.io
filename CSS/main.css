@@ -375,7 +375,7 @@ input:checked+.slider::before {
 }
 
 .slider::after {
-    content: "🌞";
+    content: "";
     font-size: 0.8rem;
     position: absolute;
     top: 50%;
@@ -386,7 +386,7 @@ input:checked+.slider::before {
 }
 
 input:checked+.slider::after {
-    content: "🌙";
+    content: "";
     left: 5px;
     right: auto;
     color: var(--clr-light);
