@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#05070d">
     <title>Matvey Guralskiy - Resume</title>
     <link rel="website icon" type="png" href="https://cdn-icons-png.flaticon.com/512/12081/12081089.png">
 
@@ -20,11 +21,18 @@
         content="A professional portfolio showcasing my certifications, resume, achievements, and personal insights, reflecting my expertise and passion in DevOps and solution architecture.">
     <meta property="twitter:image" content="https://cdn-icons-png.flaticon.com/512/12081/12081089.png">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../CSS/main.css">
     <link rel="stylesheet" href="../CSS/resume.css">
+    <link rel="stylesheet" href="../CSS/upgrade.css">
 </head>
 
 <body>
+    <script>try { var m = localStorage.getItem("mode"); if (m) document.body.classList.add(m + "-mode"); } catch (e) { }</script>
     <div class="blur-wrapper"></div>
     <nav class="navbar">
         <div class="nav-logo">
@@ -87,12 +95,21 @@
 
             <div class="career-step">
                 <div class="career-step-content">
-                    <div class="career-date">September 2024 - Present
-                        <span class="current-badge">Current</span>
-                    </div>
+                    <div class="career-date">September 2024 - September 2025</div>
                     <h3 class="career-title">DevOps Engineer at Ness</h3>
                     <p class="career-description">Started my professional career as a DevOps Engineer at Ness, applying
                         my knowledge to real-world projects and continuing to grow in the field.</p>
+                </div>
+            </div>
+
+            <div class="career-step">
+                <div class="career-step-content">
+                    <div class="career-date">September 2025 - Present
+                        <span class="current-badge">Current</span>
+                    </div>
+                    <h3 class="career-title">DevOps Engineer at Compie Technologies</h3>
+                    <p class="career-description">Building cloud infrastructure and platform automation for enterprise
+                        clients — CI/CD pipelines, Kubernetes environments, and multi-account AWS architecture.</p>
                 </div>
             </div>
         </div>
@@ -101,7 +118,7 @@
             <div class="resume-card">
                 <h3>English Resume</h3>
                 <div class="resume-image-container">
-                    <img src="../Images/resume/resume-eng.png" alt="English Resume Preview" class="resume-image">
+                    <img src="../Images/resume/resume-eng.png" alt="English Resume Preview" class="resume-image" loading="lazy">
                 </div>
                 <div class="resume-btn-group">
                     <a href="../PDF/resume-eng.pdf" download class="resume-btn resume-btn-primary">Download PDF</a>
@@ -112,7 +129,7 @@
             <div class="resume-card">
                 <h3>Hebrew Resume</h3>
                 <div class="resume-image-container">
-                    <img src="../Images/resume/resume-heb.png" alt="Hebrew Resume Preview" class="resume-image">
+                    <img src="../Images/resume/resume-heb.png" alt="Hebrew Resume Preview" class="resume-image" loading="lazy">
                 </div>
                 <div class="resume-btn-group">
                     <a href="../PDF/resume-heb.pdf" download class="resume-btn resume-btn-primary">Download PDF</a>
@@ -123,6 +140,7 @@
     </main>
     <script src="../JavaScript/main.js"></script>
     <script src="../JavaScript/resume.js"></script>
+    <script src="../JavaScript/effects.js"></script>
 </body>
 
 </html>

@@ -56,6 +56,8 @@ document.addEventListener('keydown', (e) => {
 
 // Gallery functionality
 function initGallery(gallery) {
+    if (gallery.dataset.init) return;
+    gallery.dataset.init = '1';
     const container = gallery.querySelector('.gallery-container');
     const slides = gallery.querySelectorAll('.gallery-slide');
     const prevBtn = gallery.querySelector('.gallery-prev');
