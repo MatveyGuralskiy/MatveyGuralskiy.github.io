@@ -43,10 +43,14 @@ document.addEventListener('DOMContentLoaded', () => {
     onScroll();
 
     /* ---------- Active nav link ---------- */
-    const page = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    const norm = p => p.replace(/index\.html$/, '').replace(/\/+$/, '') || '/';
+    const page = norm(location.pathname.toLowerCase());
     document.querySelectorAll('.nav-links a').forEach(link => {
-        const href = (link.getAttribute('href') || '').split('/').pop().toLowerCase();
-        if (href === page) link.classList.add('active-link');
+        const raw = link.getAttribute('href') || '';
+        if (raw.startsWith('mailto:') || raw.startsWith('http')) return;
+        if (norm(new URL(raw, location.href).pathname.toLowerCase()) === page) {
+            link.classList.add('active-link');
+        }
     });
 
     /* ---------- Scroll-reveal (staggered per container) ---------- */
@@ -360,7 +364,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* ---------- Command palette (⌘K) ---------- */
     (function cmdk() {
-        const root = /\/html\//.test(location.pathname.toLowerCase()) ? '../' : './';
         const S = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">';
         const ICONS = {
             home: S + '<path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
@@ -376,13 +379,13 @@ document.addEventListener('DOMContentLoaded', () => {
             linkedin: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13Zm1.78 13.02H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg>'
         };
         const items = [
-            { icon: ICONS.home, label: 'Home', hint: 'page', act: () => location.href = root + 'index.html' },
-            { icon: ICONS.user, label: 'About', hint: 'page', act: () => location.href = root + 'Html/about.html' },
-            { icon: ICONS.rocket, label: 'Projects', hint: 'page', act: () => location.href = root + 'Html/project.html' },
-            { icon: ICONS.box, label: 'Repositories', hint: 'page', act: () => location.href = root + 'Html/repositories.html' },
-            { icon: ICONS.file, label: 'Resume', hint: 'page', act: () => location.href = root + 'Html/resume.html' },
-            { icon: ICONS.award, label: 'Certifications', hint: 'page', act: () => location.href = root + 'Html/certifications.html' },
-            { icon: ICONS.download, label: 'Download CV (PDF)', hint: 'action', act: () => location.href = root + 'PDF/resume-eng.pdf' },
+            { icon: ICONS.home, label: 'Home', hint: 'page', act: () => location.href = '/' },
+            { icon: ICONS.user, label: 'About', hint: 'page', act: () => location.href = '/about/' },
+            { icon: ICONS.rocket, label: 'Projects', hint: 'page', act: () => location.href = '/projects/' },
+            { icon: ICONS.box, label: 'Repositories', hint: 'page', act: () => location.href = '/repositories/' },
+            { icon: ICONS.file, label: 'Resume', hint: 'page', act: () => location.href = '/resume/' },
+            { icon: ICONS.award, label: 'Certifications', hint: 'page', act: () => location.href = '/certifications/' },
+            { icon: ICONS.download, label: 'Download CV (PDF)', hint: 'action', act: () => location.href = '/PDF/resume-eng.pdf' },
             { icon: ICONS.mail, label: 'Send me an email', hint: 'action', act: () => location.href = 'mailto:mathewguralskiy@gmail.com' },
             { icon: ICONS.moon, label: 'Toggle day / night theme', hint: 'action', act: () => { const s = document.getElementById('modeSwitch'); if (s) { s.checked = !s.checked; s.dispatchEvent(new Event('change')); } } },
             { icon: ICONS.github, label: 'Open GitHub profile', hint: 'link', act: () => window.open('https://github.com/MatveyGuralskiy', '_blank', 'noopener') },
